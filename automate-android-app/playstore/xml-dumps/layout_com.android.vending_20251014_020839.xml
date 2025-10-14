@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<android.widget.FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:enabled="true" android:layout_height="2712px" android:layout_width="1220px"
+  android:layout_x="0px" android:layout_y="0px">
+  <android.widget.LinearLayout android:enabled="true" android:layout_height="2712px"
+    android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+    <android.widget.FrameLayout android:enabled="true" android:layout_height="2712px"
+      android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+      <android.widget.FrameLayout android:enabled="true"
+        android:id="@com.android.vending:id/0_resource_name_obfuscated"
+        android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px"
+        android:layout_y="0px">
+        <android.widget.FrameLayout android:enabled="true" android:id="@android:id/content"
+          android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px"
+          android:layout_y="0px">
+          <android.widget.FrameLayout android:enabled="true"
+            android:id="@com.android.vending:id/0_resource_name_obfuscated"
+            android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px"
+            android:layout_y="0px">
+            <android.widget.FrameLayout android:enabled="true"
+              android:id="@com.android.vending:id/0_resource_name_obfuscated"
+              android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px"
+              android:layout_y="0px">
+              <androidx.compose.ui.platform.ComposeView android:enabled="true"
+                android:id="@com.android.vending:id/0_resource_name_obfuscated"
+                android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px"
+                android:layout_y="0px">
+                <android.view.View android:enabled="true" android:layout_height="2712px"
+                  android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+                  <android.view.View android:enabled="true" android:layout_height="2378px"
+                    android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+                    <android.view.View android:enabled="true" android:layout_height="2378px"
+                      android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+                      <android.view.View android:enabled="true" android:layout_height="2274px"
+                        android:layout_width="1220px" android:layout_x="0px"
+                        android:layout_y="104px">
+                        <android.view.View android:columnCount="1" android:enabled="true"
+                          android:layout_height="2106px" android:layout_width="1220px"
+                          android:layout_x="0px" android:layout_y="272px" android:rowCount="7">
+                          <android.view.View android:enabled="true" android:layout_height="420px"
+                            android:layout_width="1076px" android:layout_x="72px"
+                            android:layout_y="284px">
+                            <android.widget.TextView
+                              android:contentDescription="what are you looking for?"
+                              android:enabled="true" android:layout_height="60px"
+                              android:layout_width="506px" android:layout_x="204px"
+                              android:layout_y="326px" android:text="What are you looking for?" />
+                            <android.view.View android:enabled="true" android:layout_height="288px"
+                              android:layout_width="1076px" android:layout_x="72px"
+                              android:layout_y="416px" android:scrollable="true">
+                              <android.view.View android:clickable="true" android:enabled="true"
+                                android:focusable="true" android:layout_height="144px"
+                                android:layout_width="594px" android:layout_x="108px"
+                                android:layout_y="416px">
+                                <android.view.View android:enabled="true"
+                                  android:layout_height="144px" android:layout_width="144px"
+                                  android:layout_x="126px" android:layout_y="416px">
+                                  <android.view.View android:enabled="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="102px" android:layout_y="416px" />
+                                  <android.view.View android:enabled="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="126px" android:layout_y="416px" />
+                                  <android.view.View android:enabled="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="150px" android:layout_y="416px" />
+                                </android.view.View>
+                                <android.widget.TextView
+                                  android:contentDescription="shop online stores"
+                                  android:enabled="true" android:layout_height="60px"
+                                  android:layout_width="366px" android:layout_x="288px"
+                                  android:layout_y="458px" android:text="Shop online stores" />
+                              </android.view.View>
+                              <android.view.View android:clickable="true" android:enabled="true"
+                                android:focusable="true" android:layout_height="144px"
+                                android:layout_width="572px" android:layout_x="108px"
+                                android:layout_y="560px">
+                                <android.view.View android:enabled="true"
+                                  android:layout_height="144px" android:layout_width="144px"
+                                  android:layout_x="126px" android:layout_y="560px">
+                                  <android.view.View android:enabled="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="102px" android:layout_y="560px" />
+                                  <android.view.View android:enabled="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="126px" android:layout_y="560px" />
+                                  <android.view.View android:enabled="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="150px" android:layout_y="560px" />
+                                </android.view.View>
+                                <android.widget.TextView
+                                  android:contentDescription="manage my email"
+                                  android:enabled="true" android:layout_height="60px"
+                                  android:layout_width="344px" android:layout_x="288px"
+                                  android:layout_y="602px" android:text="Manage my email" />
+                              </android.view.View>
+                              <android.view.View android:clickable="true" android:enabled="true"
+                                android:focusable="true" android:layout_height="144px"
+                                android:layout_width="516px" android:layout_x="704px"
+                                android:layout_y="560px">
+                                <android.view.View android:enabled="true"
+                                  android:layout_height="144px" android:layout_width="144px"
+                                  android:layout_x="722px" android:layout_y="560px">
+                                  <android.view.View android:enabled="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="698px" android:layout_y="560px" />
+                                  <android.view.View android:enabled="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="722px" android:layout_y="560px" />
+                                  <android.view.View android:enabled="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="746px" android:layout_y="560px" />
+                                </android.view.View>
+                                <android.widget.TextView
+                                  android:contentDescription="boost productivity"
+                                  android:enabled="true" android:layout_height="60px"
+                                  android:layout_width="264px" android:layout_x="884px"
+                                  android:layout_y="602px" android:text="Boost productivity" />
+                              </android.view.View>
+                              <android.view.View android:clickable="true" android:enabled="true"
+                                android:focusable="true" android:layout_height="144px"
+                                android:layout_width="494px" android:layout_x="726px"
+                                android:layout_y="416px">
+                                <android.view.View android:enabled="true"
+                                  android:layout_height="144px" android:layout_width="144px"
+                                  android:layout_x="744px" android:layout_y="416px">
+                                  <android.view.View android:enabled="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="720px" android:layout_y="416px" />
+                                  <android.view.View android:enabled="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="744px" android:layout_y="416px" />
+                                  <android.view.View android:enabled="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="768px" android:layout_y="416px" />
+                                </android.view.View>
+                                <android.widget.TextView android:contentDescription="number games"
+                                  android:enabled="true" android:layout_height="60px"
+                                  android:layout_width="242px" android:layout_x="906px"
+                                  android:layout_y="458px" android:text="Number games" />
+                              </android.view.View>
+                            </android.view.View>
+                          </android.view.View>
+                          <android.widget.TextView android:enabled="true"
+                            android:layout_height="48px" android:layout_width="170px"
+                            android:layout_x="72px" android:layout_y="800px"
+                            android:text="Sponsored" />
+                          <android.widget.TextView android:enabled="true"
+                            android:layout_height="72px" android:layout_width="459px"
+                            android:layout_x="284px" android:layout_y="788px"
+                            android:text="Suggested for You" />
+                          <android.view.View android:clickable="true"
+                            android:contentDescription="About this ad" android:enabled="true"
+                            android:focusable="true" android:layout_height="144px"
+                            android:layout_width="144px" android:layout_x="1028px"
+                            android:layout_y="752px" />
+                          <android.view.View android:clickable="true" android:enabled="true"
+                            android:focusable="true" android:layout_height="257px"
+                            android:layout_width="1076px" android:layout_x="72px"
+                            android:layout_y="908px" android:longClickable="true">
+                            <android.view.View
+                              android:contentDescription="Blinkit: Grocery in 10 minutes&#10;Blinkit&#10;Food &amp; drink&#10;Grocery lists&#10;Delivery&#10;Installed&#10;"
+                              android:enabled="true" android:layout_height="185px"
+                              android:layout_width="788px" android:layout_x="324px"
+                              android:layout_y="944px" />
+                          </android.view.View>
+                          <android.widget.TextView android:enabled="true"
+                            android:layout_height="72px" android:layout_width="349px"
+                            android:layout_x="72px" android:layout_y="1249px"
+                            android:text="You might like" />
+                          <android.view.View android:clickable="true" android:enabled="true"
+                            android:focusable="true" android:layout_height="192px"
+                            android:layout_width="526px" android:layout_x="72px"
+                            android:layout_y="1369px">
+                            <android.widget.TextView
+                              android:contentDescription="Search for 'AI apps'"
+                              android:enabled="true" android:layout_height="60px"
+                              android:layout_width="358px" android:layout_x="108px"
+                              android:layout_y="1405px" android:text="AI apps" />
+                          </android.view.View>
+                          <android.view.View android:clickable="true" android:enabled="true"
+                            android:focusable="true" android:layout_height="192px"
+                            android:layout_width="526px" android:layout_x="622px"
+                            android:layout_y="1369px">
+                            <android.widget.TextView
+                              android:contentDescription="Search for '4X games'"
+                              android:enabled="true" android:layout_height="60px"
+                              android:layout_width="358px" android:layout_x="658px"
+                              android:layout_y="1405px" android:text="4X games" />
+                          </android.view.View>
+                          <android.view.View android:clickable="true" android:enabled="true"
+                            android:focusable="true" android:layout_height="192px"
+                            android:layout_width="526px" android:layout_x="72px"
+                            android:layout_y="1585px">
+                            <android.widget.TextView
+                              android:contentDescription="Search for 'Roguelike games'"
+                              android:enabled="true" android:layout_height="60px"
+                              android:layout_width="358px" android:layout_x="108px"
+                              android:layout_y="1621px" android:text="Roguelike games" />
+                          </android.view.View>
+                          <android.view.View android:clickable="true" android:enabled="true"
+                            android:focusable="true" android:layout_height="192px"
+                            android:layout_width="526px" android:layout_x="622px"
+                            android:layout_y="1585px">
+                            <android.widget.TextView
+                              android:contentDescription="Search for 'Ghost games'"
+                              android:enabled="true" android:layout_height="60px"
+                              android:layout_width="358px" android:layout_x="658px"
+                              android:layout_y="1621px" android:text="Ghost games" />
+                          </android.view.View>
+                          <android.widget.ProgressBar android:enabled="true"
+                            android:layout_height="144px" android:layout_width="144px"
+                            android:layout_x="538px" android:layout_y="1837px" />
+                        </android.view.View>
+                        <android.view.View android:clickable="true" android:enabled="true"
+                          android:focusable="true" android:layout_height="144px"
+                          android:layout_width="896px" android:layout_x="72px"
+                          android:layout_y="116px">
+                          <android.view.View android:clickable="true" android:enabled="true"
+                            android:focusable="true" android:layout_height="144px"
+                            android:layout_width="144px" android:layout_x="96px"
+                            android:layout_y="116px">
+                            <android.view.View android:contentDescription="Search Google Play"
+                              android:enabled="true" android:layout_height="72px"
+                              android:layout_width="72px" android:layout_x="132px"
+                              android:layout_y="152px" />
+                            <android.widget.Button android:enabled="true"
+                              android:layout_height="120px" android:layout_width="120px"
+                              android:layout_x="108px" android:layout_y="128px" />
+                          </android.view.View>
+                          <android.widget.TextView android:enabled="true"
+                            android:layout_height="72px" android:layout_width="560px"
+                            android:layout_x="252px" android:layout_y="152px"
+                            android:text="Search Apps &amp; Games" />
+                          <android.view.View android:clickable="true" android:enabled="true"
+                            android:focusable="true" android:layout_height="144px"
+                            android:layout_width="144px" android:layout_x="812px"
+                            android:layout_y="116px">
+                            <android.view.View android:contentDescription="Voice search"
+                              android:enabled="true" android:layout_height="72px"
+                              android:layout_width="72px" android:layout_x="848px"
+                              android:layout_y="152px" />
+                            <android.widget.Button android:enabled="true"
+                              android:layout_height="120px" android:layout_width="120px"
+                              android:layout_x="824px" android:layout_y="128px" />
+                          </android.view.View>
+                        </android.view.View>
+                        <android.view.View android:clickable="true" android:enabled="true"
+                          android:focusable="true" android:layout_height="144px"
+                          android:layout_width="144px" android:layout_x="1004px"
+                          android:layout_y="116px">
+                          <iuk android:enabled="true" android:layout_height="144px"
+                            android:layout_width="144px" android:layout_x="1004px"
+                            android:layout_y="116px">
+                            <android.widget.FrameLayout android:clickable="true"
+                              android:contentDescription="Signed in as Rahul Parmar rahulparmar.n1798@gmail.com&#10;Google One account.&#10;Account and settings."
+                              android:enabled="true" android:focusable="true"
+                              android:layout_height="144px" android:layout_width="144px"
+                              android:layout_x="1004px" android:layout_y="116px">
+                              <android.widget.FrameLayout android:enabled="true"
+                                android:id="@com.android.vending:id/0_resource_name_obfuscated"
+                                android:layout_height="144px" android:layout_width="144px"
+                                android:layout_x="1004px" android:layout_y="116px">
+                                <android.widget.FrameLayout android:enabled="true"
+                                  android:id="@com.android.vending:id/0_resource_name_obfuscated"
+                                  android:layout_height="0px" android:layout_width="0px"
+                                  android:layout_x="1010px" android:layout_y="122px" />
+                                <android.widget.ImageView android:enabled="true"
+                                  android:id="@com.android.vending:id/0_resource_name_obfuscated"
+                                  android:layout_height="132px" android:layout_width="132px"
+                                  android:layout_x="1010px" android:layout_y="122px" />
+                              </android.widget.FrameLayout>
+                            </android.widget.FrameLayout>
+                          </iuk>
+                        </android.view.View>
+                      </android.view.View>
+                    </android.view.View>
+                  </android.view.View>
+                  <android.view.View android:enabled="true" android:layout_height="192px"
+                    android:layout_width="1220px" android:layout_x="0px" android:layout_y="2378px">
+                    <android.view.View android:columnCount="5" android:enabled="true"
+                      android:layout_height="192px" android:layout_width="1220px"
+                      android:layout_x="0px" android:layout_y="2378px" android:rowCount="1">
+                      <android.view.View android:clickable="true" android:enabled="true"
+                        android:focusable="true" android:layout_column="0"
+                        android:layout_height="192px" android:layout_row="0"
+                        android:layout_width="244px" android:layout_x="0px"
+                        android:layout_y="2378px">
+                        <android.view.View android:enabled="true" android:layout_height="144px"
+                          android:layout_width="168px" android:layout_x="38px"
+                          android:layout_y="2372px">
+                          <iuk android:enabled="true" android:layout_height="72px"
+                            android:layout_width="72px" android:layout_x="86px"
+                            android:layout_y="2408px">
+                            <android.widget.ImageView android:enabled="true"
+                              android:layout_height="72px" android:layout_width="72px"
+                              android:layout_x="86px" android:layout_y="2408px" />
+                          </iuk>
+                        </android.view.View>
+                        <android.widget.TextView android:enabled="true" android:layout_height="48px"
+                          android:layout_width="120px" android:layout_x="62px"
+                          android:layout_y="2504px" android:text="Games" />
+                        <android.view.View android:enabled="true" android:layout_height="192px"
+                          android:layout_width="244px" android:layout_x="0px"
+                          android:layout_y="2378px" />
+                      </android.view.View>
+                      <android.view.View android:clickable="true" android:enabled="true"
+                        android:focusable="true" android:layout_column="1"
+                        android:layout_height="192px" android:layout_row="0"
+                        android:layout_width="244px" android:layout_x="244px"
+                        android:layout_y="2378px">
+                        <android.view.View android:enabled="true" android:layout_height="144px"
+                          android:layout_width="168px" android:layout_x="282px"
+                          android:layout_y="2372px">
+                          <iuk android:enabled="true" android:layout_height="72px"
+                            android:layout_width="72px" android:layout_x="330px"
+                            android:layout_y="2408px">
+                            <android.widget.ImageView android:enabled="true"
+                              android:layout_height="72px" android:layout_width="72px"
+                              android:layout_x="330px" android:layout_y="2408px" />
+                          </iuk>
+                        </android.view.View>
+                        <android.widget.TextView android:enabled="true" android:layout_height="48px"
+                          android:layout_width="88px" android:layout_x="322px"
+                          android:layout_y="2504px" android:text="Apps" />
+                        <android.view.View android:enabled="true" android:layout_height="192px"
+                          android:layout_width="244px" android:layout_x="244px"
+                          android:layout_y="2378px" />
+                      </android.view.View>
+                      <android.view.View android:enabled="true" android:focusable="true"
+                        android:layout_column="2" android:layout_height="192px"
+                        android:layout_row="0" android:layout_width="244px" android:layout_x="488px"
+                        android:layout_y="2378px" android:selected="true">
+                        <android.view.View android:enabled="true" android:layout_height="144px"
+                          android:layout_width="168px" android:layout_x="526px"
+                          android:layout_y="2372px">
+                          <iuk android:enabled="true" android:layout_height="72px"
+                            android:layout_width="72px" android:layout_x="574px"
+                            android:layout_y="2408px">
+                            <android.widget.ImageView android:enabled="true"
+                              android:layout_height="72px" android:layout_width="72px"
+                              android:layout_x="574px" android:layout_y="2408px"
+                              android:selected="true" />
+                          </iuk>
+                        </android.view.View>
+                        <android.widget.TextView android:enabled="true" android:layout_height="48px"
+                          android:layout_width="122px" android:layout_x="549px"
+                          android:layout_y="2504px" android:text="Search" />
+                        <android.view.View android:enabled="true" android:layout_height="192px"
+                          android:layout_width="244px" android:layout_x="488px"
+                          android:layout_y="2378px" />
+                      </android.view.View>
+                      <android.view.View android:clickable="true" android:enabled="true"
+                        android:focusable="true" android:layout_column="3"
+                        android:layout_height="192px" android:layout_row="0"
+                        android:layout_width="244px" android:layout_x="732px"
+                        android:layout_y="2378px">
+                        <android.view.View android:enabled="true" android:layout_height="144px"
+                          android:layout_width="168px" android:layout_x="770px"
+                          android:layout_y="2372px">
+                          <iuk android:enabled="true" android:layout_height="72px"
+                            android:layout_width="72px" android:layout_x="818px"
+                            android:layout_y="2408px">
+                            <android.widget.ImageView android:enabled="true"
+                              android:layout_height="72px" android:layout_width="72px"
+                              android:layout_x="818px" android:layout_y="2408px" />
+                          </iuk>
+                        </android.view.View>
+                        <android.widget.TextView android:enabled="true" android:layout_height="48px"
+                          android:layout_width="108px" android:layout_x="800px"
+                          android:layout_y="2504px" android:text="Offers" />
+                        <android.view.View android:enabled="true" android:layout_height="192px"
+                          android:layout_width="244px" android:layout_x="732px"
+                          android:layout_y="2378px" />
+                      </android.view.View>
+                      <android.view.View android:clickable="true" android:enabled="true"
+                        android:focusable="true" android:layout_column="4"
+                        android:layout_height="192px" android:layout_row="0"
+                        android:layout_width="244px" android:layout_x="976px"
+                        android:layout_y="2378px">
+                        <android.view.View android:enabled="true" android:layout_height="144px"
+                          android:layout_width="168px" android:layout_x="1014px"
+                          android:layout_y="2372px">
+                          <iuk android:enabled="true" android:layout_height="72px"
+                            android:layout_width="72px" android:layout_x="1062px"
+                            android:layout_y="2408px">
+                            <android.widget.ImageView android:enabled="true"
+                              android:layout_height="72px" android:layout_width="72px"
+                              android:layout_x="1062px" android:layout_y="2408px" />
+                          </iuk>
+                        </android.view.View>
+                        <android.widget.TextView android:enabled="true" android:layout_height="48px"
+                          android:layout_width="107px" android:layout_x="1045px"
+                          android:layout_y="2504px" android:text="Books" />
+                        <android.view.View android:enabled="true" android:layout_height="192px"
+                          android:layout_width="244px" android:layout_x="976px"
+                          android:layout_y="2378px" />
+                      </android.view.View>
+                    </android.view.View>
+                  </android.view.View>
+                </android.view.View>
+              </androidx.compose.ui.platform.ComposeView>
+            </android.widget.FrameLayout>
+            <android.widget.FrameLayout android:enabled="true"
+              android:id="@com.android.vending:id/0_resource_name_obfuscated"
+              android:layout_height="104px" android:layout_width="1220px" android:layout_x="0px"
+              android:layout_y="0px">
+              <android.widget.FrameLayout android:enabled="true"
+                android:id="@com.android.vending:id/0_resource_name_obfuscated"
+                android:layout_height="0px" android:layout_width="1220px" android:layout_x="0px"
+                android:layout_y="104px" />
+            </android.widget.FrameLayout>
+          </android.widget.FrameLayout>
+        </android.widget.FrameLayout>
+      </android.widget.FrameLayout>
+    </android.widget.FrameLayout>
+  </android.widget.LinearLayout>
+  <android.view.View android:enabled="true" android:id="@android:id/statusBarBackground"
+    android:layout_height="104px" android:layout_width="1220px" android:layout_x="0px"
+    android:layout_y="0px" />
+  <android.view.View android:enabled="true" android:id="@android:id/navigationBarBackground"
+    android:layout_height="142px" android:layout_width="1220px" android:layout_x="0px"
+    android:layout_y="2570px" />
+</android.widget.FrameLayout>

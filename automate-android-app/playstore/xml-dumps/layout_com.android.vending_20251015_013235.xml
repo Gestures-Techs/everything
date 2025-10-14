@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><android.widget.FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+  <android.widget.LinearLayout android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+    <android.widget.FrameLayout android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+      <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+        <android.widget.FrameLayout android:enabled="true" android:id="@android:id/content" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+          <android.widget.FrameLayout android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+            <android.widget.FrameLayout android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+              <android.view.ViewGroup android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+                <android.view.View android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="0px" android:layout_width="0px" android:layout_x="0px" android:layout_y="0px"/>
+                <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="168px" android:layout_width="1124px" android:layout_x="48px" android:layout_y="308px">
+                  <android.widget.ImageView android:clickable="true" android:contentDescription="Close" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="168px" android:layout_width="168px" android:layout_x="48px" android:layout_y="308px"/>
+                  <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="72px" android:layout_width="788px" android:layout_x="216px" android:layout_y="356px">
+                    <android.widget.ImageView android:enabled="true" android:layout_height="72px" android:layout_width="788px" android:layout_x="216px" android:layout_y="356px"/>
+                  </android.widget.FrameLayout>
+                </android.widget.FrameLayout>
+                <android.widget.ScrollView android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="2036px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="476px">
+                  <android.widget.FrameLayout android:enabled="true" android:layout_height="2036px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="476px">
+                    <android.widget.LinearLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="2036px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="476px">
+                      <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="1892px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="476px">
+                        <android.widget.LinearLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="1892px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="476px">
+                          <androidx.cardview.widget.CardView android:enabled="true" android:layout_height="1445px" android:layout_width="1076px" android:layout_x="72px" android:layout_y="476px">
+                            <android.widget.LinearLayout android:enabled="true" android:layout_height="1445px" android:layout_width="1076px" android:layout_x="72px" android:layout_y="476px">
+                              <android.view.ViewGroup android:clickable="true" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="204px" android:layout_width="1076px" android:layout_x="72px" android:layout_y="476px">
+                                <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="156px" android:layout_width="168px" android:layout_x="96px" android:layout_y="500px">
+                                  <android.widget.FrameLayout android:clickable="true" android:contentDescription="Change profile picture." android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="156px" android:layout_width="168px" android:layout_x="96px" android:layout_y="500px">
+                                    <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="0px" android:layout_width="0px" android:layout_x="102px" android:layout_y="500px"/>
+                                    <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="0px" android:layout_width="0px" android:layout_x="102px" android:layout_y="500px"/>
+                                    <android.widget.ImageView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="156px" android:layout_width="156px" android:layout_x="102px" android:layout_y="500px"/>
+                                  </android.widget.FrameLayout>
+                                </android.widget.FrameLayout>
+                                <android.widget.TextView android:contentDescription="Signed in as Rahul Parmar&#10;rahulparmar.n1798@gmail.com&#10;Google One account." android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="65px" android:layout_width="266px" android:layout_x="276px" android:layout_y="517px" android:text="Rahul Parmar"/>
+                                <android.widget.TextView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="54px" android:layout_width="507px" android:layout_x="276px" android:layout_y="585px" android:text="rahulparmar.n1798@gmail.com"/>
+                                <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="72px" android:layout_width="72px" android:layout_x="1028px" android:layout_y="542px">
+                                  <android.widget.ImageView android:contentDescription="Expand account list." android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="72px" android:layout_width="72px" android:layout_x="1028px" android:layout_y="542px"/>
+                                </android.widget.FrameLayout>
+                              </android.view.ViewGroup>
+                              <android.widget.FrameLayout android:enabled="true" android:layout_height="144px" android:layout_width="1076px" android:layout_x="72px" android:layout_y="680px">
+                                <android.widget.Button android:clickable="true" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="144px" android:layout_width="682px" android:layout_x="276px" android:layout_y="680px" android:text="Manage your Google Account"/>
+                              </android.widget.FrameLayout>
+                              <android.support.v7.widget.RecyclerView android:columnCount="1" android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="48px" android:layout_width="1076px" android:layout_x="72px" android:layout_y="824px"/>
+                              <android.support.v7.widget.RecyclerView android:columnCount="1" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="1049px" android:layout_width="1076px" android:layout_x="72px" android:layout_y="872px" android:rowCount="7">
+                                <android.view.ViewGroup android:clickable="true" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_column="0" android:layout_height="149px" android:layout_row="0" android:layout_width="1076px" android:layout_x="72px" android:layout_y="878px">
+                                  <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="113px" android:layout_width="950px" android:layout_x="150px" android:layout_y="914px">
+                                    <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="920px">
+                                      <android.view.ViewGroup android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="920px">
+                                        <android.widget.ImageView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="60px" android:layout_width="60px" android:layout_x="150px" android:layout_y="923px"/>
+                                        <android.widget.TextView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="65px" android:layout_width="824px" android:layout_x="276px" android:layout_y="920px" android:text="My apps &amp; games"/>
+                                      </android.view.ViewGroup>
+                                    </android.widget.FrameLayout>
+                                  </android.widget.FrameLayout>
+                                  <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="0px" android:layout_width="0px" android:layout_x="1100px" android:layout_y="953px"/>
+                                </android.view.ViewGroup>
+                                <android.view.ViewGroup android:clickable="true" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_column="0" android:layout_height="149px" android:layout_row="1" android:layout_width="1076px" android:layout_x="72px" android:layout_y="1027px">
+                                  <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="113px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1063px">
+                                    <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1069px">
+                                      <android.view.ViewGroup android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1069px">
+                                        <android.widget.ImageView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="60px" android:layout_width="60px" android:layout_x="150px" android:layout_y="1072px"/>
+                                        <android.widget.TextView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="65px" android:layout_width="824px" android:layout_x="276px" android:layout_y="1069px" android:text="Notifications and offers"/>
+                                      </android.view.ViewGroup>
+                                    </android.widget.FrameLayout>
+                                  </android.widget.FrameLayout>
+                                  <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="0px" android:layout_width="0px" android:layout_x="1100px" android:layout_y="1102px"/>
+                                </android.view.ViewGroup>
+                                <android.view.ViewGroup android:clickable="true" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_column="0" android:layout_height="149px" android:layout_row="2" android:layout_width="1076px" android:layout_x="72px" android:layout_y="1176px">
+                                  <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="113px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1212px">
+                                    <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1218px">
+                                      <android.view.ViewGroup android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1218px">
+                                        <android.widget.ImageView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="60px" android:layout_width="60px" android:layout_x="150px" android:layout_y="1221px"/>
+                                        <android.widget.TextView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="65px" android:layout_width="824px" android:layout_x="276px" android:layout_y="1218px" android:text="Payments and subscriptions"/>
+                                      </android.view.ViewGroup>
+                                    </android.widget.FrameLayout>
+                                  </android.widget.FrameLayout>
+                                  <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="0px" android:layout_width="0px" android:layout_x="1100px" android:layout_y="1251px"/>
+                                </android.view.ViewGroup>
+                                <android.view.ViewGroup android:clickable="true" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_column="0" android:layout_height="149px" android:layout_row="3" android:layout_width="1076px" android:layout_x="72px" android:layout_y="1325px">
+                                  <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="113px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1361px">
+                                    <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1367px">
+                                      <android.view.ViewGroup android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1367px">
+                                        <android.widget.ImageView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="60px" android:layout_width="60px" android:layout_x="150px" android:layout_y="1370px"/>
+                                        <android.widget.TextView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="65px" android:layout_width="824px" android:layout_x="276px" android:layout_y="1367px" android:text="Play Protect"/>
+                                      </android.view.ViewGroup>
+                                    </android.widget.FrameLayout>
+                                  </android.widget.FrameLayout>
+                                  <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="0px" android:layout_width="0px" android:layout_x="1100px" android:layout_y="1400px"/>
+                                </android.view.ViewGroup>
+                                <android.view.ViewGroup android:clickable="true" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_column="0" android:layout_height="149px" android:layout_row="4" android:layout_width="1076px" android:layout_x="72px" android:layout_y="1474px">
+                                  <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="113px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1510px">
+                                    <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1516px">
+                                      <android.view.ViewGroup android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1516px">
+                                        <android.widget.ImageView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="60px" android:layout_width="60px" android:layout_x="150px" android:layout_y="1519px"/>
+                                        <android.widget.TextView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="65px" android:layout_width="824px" android:layout_x="276px" android:layout_y="1516px" android:text="Library"/>
+                                      </android.view.ViewGroup>
+                                    </android.widget.FrameLayout>
+                                  </android.widget.FrameLayout>
+                                  <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="0px" android:layout_width="0px" android:layout_x="1100px" android:layout_y="1549px"/>
+                                </android.view.ViewGroup>
+                                <android.view.ViewGroup android:clickable="true" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_column="0" android:layout_height="149px" android:layout_row="5" android:layout_width="1076px" android:layout_x="72px" android:layout_y="1623px">
+                                  <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="113px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1659px">
+                                    <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1665px">
+                                      <android.view.ViewGroup android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1665px">
+                                        <android.widget.ImageView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="60px" android:layout_width="60px" android:layout_x="150px" android:layout_y="1668px"/>
+                                        <android.widget.TextView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="65px" android:layout_width="824px" android:layout_x="276px" android:layout_y="1665px" android:text="Play Pass"/>
+                                      </android.view.ViewGroup>
+                                    </android.widget.FrameLayout>
+                                  </android.widget.FrameLayout>
+                                  <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="0px" android:layout_width="0px" android:layout_x="1100px" android:layout_y="1698px"/>
+                                </android.view.ViewGroup>
+                                <android.view.ViewGroup android:clickable="true" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_column="0" android:layout_height="149px" android:layout_row="6" android:layout_width="1076px" android:layout_x="72px" android:layout_y="1772px">
+                                  <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="113px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1808px">
+                                    <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1814px">
+                                      <android.view.ViewGroup android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1814px">
+                                        <android.widget.ImageView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="60px" android:layout_width="60px" android:layout_x="150px" android:layout_y="1817px"/>
+                                        <android.widget.TextView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="65px" android:layout_width="824px" android:layout_x="276px" android:layout_y="1814px" android:text="Play Points"/>
+                                      </android.view.ViewGroup>
+                                    </android.widget.FrameLayout>
+                                  </android.widget.FrameLayout>
+                                  <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="0px" android:layout_width="0px" android:layout_x="1100px" android:layout_y="1847px"/>
+                                </android.view.ViewGroup>
+                              </android.support.v7.widget.RecyclerView>
+                            </android.widget.LinearLayout>
+                          </androidx.cardview.widget.CardView>
+                          <android.support.v7.widget.RecyclerView android:columnCount="1" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="447px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="1921px" android:rowCount="3">
+                            <android.view.ViewGroup android:clickable="true" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_column="0" android:layout_height="149px" android:layout_row="0" android:layout_width="1220px" android:layout_x="0px" android:layout_y="1921px">
+                              <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="113px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1957px">
+                                <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1963px">
+                                  <android.view.ViewGroup android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="1963px">
+                                    <android.widget.ImageView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="60px" android:layout_width="60px" android:layout_x="150px" android:layout_y="1966px"/>
+                                    <android.widget.TextView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="65px" android:layout_width="824px" android:layout_x="276px" android:layout_y="1963px" android:text="Personalisation in Play"/>
+                                  </android.view.ViewGroup>
+                                </android.widget.FrameLayout>
+                              </android.widget.FrameLayout>
+                              <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="0px" android:layout_width="0px" android:layout_x="1100px" android:layout_y="1996px"/>
+                            </android.view.ViewGroup>
+                            <android.view.ViewGroup android:clickable="true" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_column="0" android:layout_height="149px" android:layout_row="1" android:layout_width="1220px" android:layout_x="0px" android:layout_y="2070px">
+                              <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="113px" android:layout_width="950px" android:layout_x="150px" android:layout_y="2106px">
+                                <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="2112px">
+                                  <android.view.ViewGroup android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="2112px">
+                                    <android.widget.ImageView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="60px" android:layout_width="60px" android:layout_x="150px" android:layout_y="2115px"/>
+                                    <android.widget.TextView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="65px" android:layout_width="824px" android:layout_x="276px" android:layout_y="2112px" android:text="Settings"/>
+                                  </android.view.ViewGroup>
+                                </android.widget.FrameLayout>
+                              </android.widget.FrameLayout>
+                              <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="0px" android:layout_width="0px" android:layout_x="1100px" android:layout_y="2145px"/>
+                            </android.view.ViewGroup>
+                            <android.view.ViewGroup android:clickable="true" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_column="0" android:layout_height="149px" android:layout_row="2" android:layout_width="1220px" android:layout_x="0px" android:layout_y="2219px">
+                              <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="113px" android:layout_width="950px" android:layout_x="150px" android:layout_y="2255px">
+                                <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="2261px">
+                                  <android.view.ViewGroup android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="101px" android:layout_width="950px" android:layout_x="150px" android:layout_y="2261px">
+                                    <android.widget.ImageView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="60px" android:layout_width="60px" android:layout_x="150px" android:layout_y="2264px"/>
+                                    <android.widget.TextView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="65px" android:layout_width="824px" android:layout_x="276px" android:layout_y="2261px" android:text="Help and feedback"/>
+                                  </android.view.ViewGroup>
+                                </android.widget.FrameLayout>
+                              </android.widget.FrameLayout>
+                              <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="0px" android:layout_width="0px" android:layout_x="1100px" android:layout_y="2294px"/>
+                            </android.view.ViewGroup>
+                          </android.support.v7.widget.RecyclerView>
+                        </android.widget.LinearLayout>
+                      </android.widget.FrameLayout>
+                      <android.view.View android:enabled="true" android:layout_height="0px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="2368px"/>
+                      <android.widget.FrameLayout android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="144px" android:layout_width="854px" android:layout_x="183px" android:layout_y="2368px">
+                        <android.view.ViewGroup android:enabled="true" android:layout_height="144px" android:layout_width="854px" android:layout_x="183px" android:layout_y="2368px">
+                          <android.widget.Button android:clickable="true" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="144px" android:layout_width="302px" android:layout_x="255px" android:layout_y="2368px" android:text="Privacy Policy"/>
+                          <android.widget.ImageView android:enabled="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="9px" android:layout_width="9px" android:layout_x="581px" android:layout_y="2436px"/>
+                          <android.widget.Button android:clickable="true" android:enabled="true" android:focusable="true" android:id="@com.android.vending:id/0_resource_name_obfuscated" android:layout_height="144px" android:layout_width="351px" android:layout_x="614px" android:layout_y="2368px" android:text="Terms of Service"/>
+                        </android.view.ViewGroup>
+                      </android.widget.FrameLayout>
+                    </android.widget.LinearLayout>
+                  </android.widget.FrameLayout>
+                </android.widget.ScrollView>
+              </android.view.ViewGroup>
+            </android.widget.FrameLayout>
+          </android.widget.FrameLayout>
+        </android.widget.FrameLayout>
+      </android.widget.FrameLayout>
+    </android.widget.FrameLayout>
+  </android.widget.LinearLayout>
+</android.widget.FrameLayout>
