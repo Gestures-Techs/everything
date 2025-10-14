@@ -28,7 +28,7 @@
             appsList.innerHTML = '<li>Loading apps...</li>';
 
             try {
-                const res = await fetch('apps/apps.json');
+                const res = await fetch('public/apps.json');
                 if (!res.ok) throw new Error('Cannot fetch apps.json');
                 const apps = await res.json();
 
