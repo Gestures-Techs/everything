@@ -50,10 +50,19 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <!-- XML Input Area -->
                 <div class="flex flex-col">
-                    <label for="xml-input" class="mb-2 font-semibold text-lg">Android XML Content</label>
+                    <div class="flex justify-between items-center mb-2">
+                        <label for="xml-input" class="font-semibold text-lg">Android XML Content</label>
+                        <div class="flex items-center gap-2">
+                             <label for="file-upload" class="bg-gray-700 hover:bg-gray-600 text-white text-sm font-bold py-2 px-3 rounded-lg cursor-pointer transition-colors duration-200">
+                                Upload File
+                            </label>
+                            <input id="file-upload" type="file" class="hidden" accept=".xml,text/xml">
+                            <button id="clear-btn" class="bg-red-600 hover:bg-red-700 text-white text-sm font-bold py-2 px-3 rounded-lg transition-colors duration-200">Clear</button>
+                        </div>
+                    </div>
                     <textarea id="xml-input"
                         class="w-full h-96 p-4 bg-gray-800 border border-gray-700 rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-300 font-mono text-sm resize-y"
-                        placeholder="Paste your Android XML here..."
+                        placeholder="Paste your Android XML here or upload a file..."
                         spellcheck="false"></textarea>
                 </div>
 
@@ -88,6 +97,9 @@
         const xpathInput = document.getElementById('xpath-input');
         const validateBtn = document.getElementById('validate-btn');
         const resultOutput = document.getElementById('result-output');
+        const fileUpload = document.getElementById('file-upload');
+        const clearBtn = document.getElementById('clear-btn');
+
 
         // Pre-fill with example Android XML data
         xmlInput.value = `<android.widget.FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -121,7 +133,37 @@
 
         xpathInput.value = `//android.widget.TextView[@android:text='My apps & games']`;
 
+        // Handle File Upload
+        fileUpload.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (!file) {
+                return;
+            }
 
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const fileContent = e.target.result;
+                xmlInput.value = fileContent;
+                // Automatically trigger validation after loading the file
+                validateBtn.click();
+            };
+            reader.onerror = () => {
+                resultOutput.innerHTML = `<span class="text-red-400">Error reading file: ${reader.error}</span>`;
+            };
+            reader.readAsText(file);
+
+            // Reset the file input so the user can upload the same file again if they modify it
+            event.target.value = null;
+        });
+
+        // Handle Clear Button
+        clearBtn.addEventListener('click', () => {
+            xmlInput.value = '';
+            xpathInput.value = '';
+            resultOutput.innerHTML = 'Validation results will appear here...';
+        });
+
+        // Main validation logic
         validateBtn.addEventListener('click', () => {
             const xmlString = xmlInput.value.trim();
             const xpathString = xpathInput.value.trim();
@@ -163,12 +205,10 @@
 
             try {
                 // 4. Evaluate the XPath with the namespace resolver
-                const result = xmlDoc.evaluate(xpathString, xmlDoc, nsResolver, XPathResult.ANY_TYPE, null);
+                const iterator = xmlDoc.evaluate(xpathString, xmlDoc, nsResolver, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
                 
                 let resultHTML = '<h3 class="font-semibold text-gray-200 mb-2">XPath Evaluation Result</h3>';
                 let hasResults = false;
-                
-                const iterator = xmlDoc.evaluate(xpathString, xmlDoc, nsResolver, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
                 let node = iterator.iterateNext();
                 let count = 0;
                 let nodesText = '';
