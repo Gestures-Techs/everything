@@ -1,55 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Everything - Apps Collection</title>
-    <style>
-        body { font-family: Arial; max-width: 800px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
-        .container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { text-align: center; margin-bottom: 30px; }
-        .apps-list { list-style: none; padding: 0; }
-        .app-item { margin: 15px 0; padding: 15px; background: #f9f9f9; border-radius: 5px; border-left: 4px solid #007acc; }
-        .app-link { text-decoration: none; color: #007acc; font-weight: bold; font-size: 18px; }
-        .app-link:hover { color: #005a99; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everything - Apps Collection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 15px 0;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 5px;
+      border-left: 4px solid #007acc;
+    }
+    a {
+      text-decoration: none;
+      color: #007acc;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    a:hover {
+      color: #005a99;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Everything - Apps Collection</h1>
-        <ul class="apps-list" id="appsList">
-            <li>Loading apps...</li>
-        </ul>
-    </div>
+  <div class="container">
+    <h1>Everything - Apps Collection</h1>
+    <ul id="appsList"></ul>
+  </div>
 
-    <script>
-        async function loadApps() {
-            const appsList = document.getElementById('appsList');
-            appsList.innerHTML = '<li>Loading apps...</li>';
+  <script>
+    // 🧩 Define your HTML files here
+    const apps = [
+      {
+        file: 'android-xml-xpath-validator.html',
+        name: 'Android XML XPath Validator',
+        description: 'Validate and test XPath expressions for Android XML layouts'
+      },
+      {
+        file: 'another-app.html',
+        name: 'Another App',
+        description: 'A placeholder for another future experiment'
+      }
+    ];
 
-            try {
-                const res = await fetch('public/apps.json');
-                if (!res.ok) throw new Error('Cannot fetch apps.json');
-                const apps = await res.json();
-
-                appsList.innerHTML = '';
-                apps.forEach(app => {
-                    const li = document.createElement('li');
-                    li.className = 'app-item';
-                    li.innerHTML = `
-                        <a href="apps/${app.file}" class="app-link" target="_blank">${app.name}</a>
-                        <div>${app.description}</div>
-                    `;
-                    appsList.appendChild(li);
-                });
-
-            } catch (err) {
-                appsList.innerHTML = '<li>Failed to load apps. Check apps.json or hosting.</li>';
-                console.error(err);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', loadApps);
-    </script>
+    // 🚀 Render them dynamically
+    const list = document.getElementById('appsList');
+    apps.forEach(app => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <a href="${app.file}" target="_blank">${app.name}</a>
+        <div>${app.description}</div>
+      `;
+      list.appendChild(li);
+    });
+  </script>
 </body>
 </html>
