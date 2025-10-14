@@ -71,7 +71,7 @@
     apps.forEach(app => {
       const li = document.createElement('li');
       li.innerHTML = `
-        <a href="/${app.file}" target="_blank">${app.name}</a>
+        <a href="${app.file}" target="_blank">${app.name}</a>
         <div>${app.description}</div>
       `;
       list.appendChild(li);
