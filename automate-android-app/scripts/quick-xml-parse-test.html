@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Android XML XPath Tester</title>
+</head>
+<body>
+  <h1>Android XML XPath Tester</h1>
+  <p>Open the browser console to test XPath expressions on your XML.</p>
+
+  <script>
+    console.log("🚀 Starting Android XML XPath Tester...");
+
+    // ----------------------------
+    // 1️⃣ Paste your Android XML here
+    const xmlString = `
+<android.widget.FrameLayout xmlns:android="http://schemas.android.com/apk/res/android">
+  <android.widget.FrameLayout android:id="@android:id/content" android:clickable="true" />
+  <android.widget.FrameLayout android:id="@android:id/layout" android:clickable="false" />
+  <android.widget.TextView android:text="My apps &amp; games" />
+</android.widget.FrameLayout>
+    `;
+
+    console.log("📄 XML string loaded. Length:", xmlString.length);
+
+    // 2️⃣ Parse XML string safely
+    const parser = new DOMParser();
+    const xmlDocument = parser.parseFromString(xmlString, "application/xml");
+
+    console.log("📝 XML parsed into document:", xmlDocument.documentElement.nodeName);
+
+    // 3️⃣ Namespace resolver for android:
+    function nsResolver(prefix) {
+      const ns = { android: "http://schemas.android.com/apk/res/android" };
+      return ns[prefix] || null;
+    }
+    console.log("🧩 Namespace resolver ready.");
+
+    // 4️⃣ Function to test XPath expressions
+    function testXPath(xpathExpr) {
+      console.log("🔍 Testing XPath:", xpathExpr);
+
+      const iterator = xmlDocument.evaluate(xpathExpr, xmlDocument, nsResolver, XPathResult.ANY_TYPE, null);
+      let node = iterator.iterateNext();
+      const nodes = [];
+      while (node) {
+        nodes.push(node);
+        node = iterator.iterateNext();
+      }
+
+      console.log(`✅ XPath: ${xpathExpr}`);
+      console.log(`Matched elements: ${nodes.length}`);
+      nodes.forEach((n, i) => console.log(`Element ${i + 1}:`, n.outerHTML || n.nodeName));
+      console.log('------------------------------------------------');
+    }
+
+    
+
+    console.log("🟢 Script loaded successfully. Use testXPath('<your_xpath_here>') in the console.");
+    testXPath("//android.widget.TextView[contains(@android:text,'My apps')]");
+    // Optional: run a test automatically
+    // testXPath("//android.widget.FrameLayout[@android:clickable='true']");
+  </script>
+</body>
+</html>
