@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<android.widget.FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:enabled="true" android:layout_height="2712px" android:layout_width="1220px"
+  android:layout_x="0px" android:layout_y="0px">
+  <android.widget.LinearLayout android:enabled="true" android:layout_height="2712px"
+    android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+    <android.widget.FrameLayout android:enabled="true" android:layout_height="2712px"
+      android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+      <android.widget.FrameLayout android:enabled="true"
+        android:id="@com.android.vending:id/0_resource_name_obfuscated"
+        android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px"
+        android:layout_y="0px">
+        <android.widget.FrameLayout android:enabled="true" android:id="@android:id/content"
+          android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px"
+          android:layout_y="0px">
+          <android.widget.FrameLayout android:enabled="true"
+            android:id="@com.android.vending:id/0_resource_name_obfuscated"
+            android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px"
+            android:layout_y="0px">
+            <android.widget.FrameLayout android:enabled="true"
+              android:id="@com.android.vending:id/0_resource_name_obfuscated"
+              android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px"
+              android:layout_y="0px">
+              <androidx.compose.ui.platform.ComposeView android:enabled="true"
+                android:id="@com.android.vending:id/0_resource_name_obfuscated"
+                android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px"
+                android:layout_y="0px">
+                <android.view.View android:enabled="true" android:layout_height="2712px"
+                  android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+                  <android.view.View android:enabled="true" android:layout_height="2570px"
+                    android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+                    <android.view.View android:enabled="true" android:layout_height="2570px"
+                      android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+                      <android.view.View android:enabled="true" android:layout_height="2466px"
+                        android:layout_width="1220px" android:layout_x="0px"
+                        android:layout_y="104px">
+                        <android.view.View android:enabled="true" android:layout_height="2298px"
+                          android:layout_width="1220px" android:layout_x="0px"
+                          android:layout_y="272px">
+                          <android.view.View android:enabled="true" android:layout_height="2298px"
+                            android:layout_width="1220px" android:layout_x="0px"
+                            android:layout_y="272px">
+                            <android.view.View android:enabled="true" android:layout_height="2130px"
+                              android:layout_width="1220px" android:layout_x="0px"
+                              android:layout_y="440px">
+                              <android.view.View android:columnCount="1" android:enabled="true"
+                                android:layout_height="2130px" android:layout_width="1220px"
+                                android:layout_x="0px" android:layout_y="440px"
+                                android:rowCount="304" android:scrollable="true">
+                                <android.view.View android:clickable="true" android:enabled="true"
+                                  android:focusable="true" android:layout_height="198px"
+                                  android:layout_width="1220px" android:layout_x="0px"
+                                  android:layout_y="440px">
+                                  <android.view.View
+                                    android:contentDescription="0% EMI Shopping App&#10;11 MB&#10;Updated on 14 Sept&#10;"
+                                    android:enabled="true" android:layout_height="125px"
+                                    android:layout_width="518px" android:layout_x="246px"
+                                    android:layout_y="476px" />
+                                  <android.view.View android:clickable="true"
+                                    android:contentDescription="Expand button"
+                                    android:enabled="true" android:focusable="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="764px" android:layout_y="467px" />
+                                  <android.view.View android:clickable="true" android:enabled="true"
+                                    android:focusable="true" android:layout_height="144px"
+                                    android:layout_width="240px" android:layout_x="908px"
+                                    android:layout_y="467px">
+                                    <android.view.View android:contentDescription="Update"
+                                      android:enabled="true" android:layout_height="120px"
+                                      android:layout_width="144px" android:layout_x="956px"
+                                      android:layout_y="479px">
+                                      <android.widget.TextView android:enabled="true"
+                                        android:layout_height="60px" android:layout_width="144px"
+                                        android:layout_x="956px" android:layout_y="509px"
+                                        android:text="Update" />
+                                    </android.view.View>
+                                    <android.widget.Button android:enabled="true"
+                                      android:layout_height="120px" android:layout_width="240px"
+                                      android:layout_x="908px" android:layout_y="479px" />
+                                  </android.view.View>
+                                </android.view.View>
+                                <android.view.View android:clickable="true" android:enabled="true"
+                                  android:focusable="true" android:layout_height="198px"
+                                  android:layout_width="1220px" android:layout_x="0px"
+                                  android:layout_y="638px">
+                                  <android.view.View
+                                    android:contentDescription="5paisa: Stocks, MF, F&amp;O App&#10;3.4 MB&#10;Updated on 6 Oct&#10;"
+                                    android:enabled="true" android:layout_height="125px"
+                                    android:layout_width="518px" android:layout_x="246px"
+                                    android:layout_y="674px" />
+                                  <android.view.View android:clickable="true"
+                                    android:contentDescription="Expand button"
+                                    android:enabled="true" android:focusable="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="764px" android:layout_y="665px" />
+                                  <android.view.View android:clickable="true" android:enabled="true"
+                                    android:focusable="true" android:layout_height="144px"
+                                    android:layout_width="240px" android:layout_x="908px"
+                                    android:layout_y="665px">
+                                    <android.view.View android:contentDescription="Update"
+                                      android:enabled="true" android:layout_height="120px"
+                                      android:layout_width="144px" android:layout_x="956px"
+                                      android:layout_y="677px">
+                                      <android.widget.TextView android:enabled="true"
+                                        android:layout_height="60px" android:layout_width="144px"
+                                        android:layout_x="956px" android:layout_y="707px"
+                                        android:text="Update" />
+                                    </android.view.View>
+                                    <android.widget.Button android:enabled="true"
+                                      android:layout_height="120px" android:layout_width="240px"
+                                      android:layout_x="908px" android:layout_y="677px" />
+                                  </android.view.View>
+                                </android.view.View>
+                                <android.view.View android:clickable="true" android:enabled="true"
+                                  android:focusable="true" android:layout_height="198px"
+                                  android:layout_width="1220px" android:layout_x="0px"
+                                  android:layout_y="836px">
+                                  <android.view.View
+                                    android:contentDescription="99acres Buy/Rent/Sell Property&#10;49 MB&#10;Updated on 22 Sept&#10;"
+                                    android:enabled="true" android:layout_height="125px"
+                                    android:layout_width="518px" android:layout_x="246px"
+                                    android:layout_y="872px" />
+                                  <android.view.View android:clickable="true"
+                                    android:contentDescription="Expand button"
+                                    android:enabled="true" android:focusable="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="764px" android:layout_y="863px" />
+                                  <android.view.View android:clickable="true" android:enabled="true"
+                                    android:focusable="true" android:layout_height="144px"
+                                    android:layout_width="240px" android:layout_x="908px"
+                                    android:layout_y="863px">
+                                    <android.view.View android:contentDescription="Update"
+                                      android:enabled="true" android:layout_height="120px"
+                                      android:layout_width="144px" android:layout_x="956px"
+                                      android:layout_y="875px">
+                                      <android.widget.TextView android:enabled="true"
+                                        android:layout_height="60px" android:layout_width="144px"
+                                        android:layout_x="956px" android:layout_y="905px"
+                                        android:text="Update" />
+                                    </android.view.View>
+                                    <android.widget.Button android:enabled="true"
+                                      android:layout_height="120px" android:layout_width="240px"
+                                      android:layout_x="908px" android:layout_y="875px" />
+                                  </android.view.View>
+                                </android.view.View>
+                                <android.view.View android:clickable="true" android:enabled="true"
+                                  android:focusable="true" android:layout_height="198px"
+                                  android:layout_width="1220px" android:layout_x="0px"
+                                  android:layout_y="1034px">
+                                  <android.view.View
+                                    android:contentDescription="AbhiBus Bus Ticket Booking App&#10;4.7 MB&#10;Updated on 22 Sept&#10;"
+                                    android:enabled="true" android:layout_height="125px"
+                                    android:layout_width="518px" android:layout_x="246px"
+                                    android:layout_y="1070px" />
+                                  <android.view.View android:clickable="true"
+                                    android:contentDescription="Expand button"
+                                    android:enabled="true" android:focusable="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="764px" android:layout_y="1061px" />
+                                  <android.view.View android:clickable="true" android:enabled="true"
+                                    android:focusable="true" android:layout_height="144px"
+                                    android:layout_width="240px" android:layout_x="908px"
+                                    android:layout_y="1061px">
+                                    <android.view.View android:contentDescription="Update"
+                                      android:enabled="true" android:layout_height="120px"
+                                      android:layout_width="144px" android:layout_x="956px"
+                                      android:layout_y="1073px">
+                                      <android.widget.TextView android:enabled="true"
+                                        android:layout_height="60px" android:layout_width="144px"
+                                        android:layout_x="956px" android:layout_y="1103px"
+                                        android:text="Update" />
+                                    </android.view.View>
+                                    <android.widget.Button android:enabled="true"
+                                      android:layout_height="120px" android:layout_width="240px"
+                                      android:layout_x="908px" android:layout_y="1073px" />
+                                  </android.view.View>
+                                </android.view.View>
+                                <android.view.View android:clickable="true" android:enabled="true"
+                                  android:focusable="true" android:layout_height="198px"
+                                  android:layout_width="1220px" android:layout_x="0px"
+                                  android:layout_y="1232px">
+                                  <android.view.View
+                                    android:contentDescription="ACKO Insurance&#10;7.0 MB&#10;Updated on 22 Sept&#10;"
+                                    android:enabled="true" android:layout_height="125px"
+                                    android:layout_width="518px" android:layout_x="246px"
+                                    android:layout_y="1268px" />
+                                  <android.view.View android:clickable="true"
+                                    android:contentDescription="Expand button"
+                                    android:enabled="true" android:focusable="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="764px" android:layout_y="1259px" />
+                                  <android.view.View android:clickable="true" android:enabled="true"
+                                    android:focusable="true" android:layout_height="144px"
+                                    android:layout_width="240px" android:layout_x="908px"
+                                    android:layout_y="1259px">
+                                    <android.view.View android:contentDescription="Update"
+                                      android:enabled="true" android:layout_height="120px"
+                                      android:layout_width="144px" android:layout_x="956px"
+                                      android:layout_y="1271px">
+                                      <android.widget.TextView android:enabled="true"
+                                        android:layout_height="60px" android:layout_width="144px"
+                                        android:layout_x="956px" android:layout_y="1301px"
+                                        android:text="Update" />
+                                    </android.view.View>
+                                    <android.widget.Button android:enabled="true"
+                                      android:layout_height="120px" android:layout_width="240px"
+                                      android:layout_x="908px" android:layout_y="1271px" />
+                                  </android.view.View>
+                                </android.view.View>
+                                <android.view.View android:clickable="true" android:enabled="true"
+                                  android:focusable="true" android:layout_height="198px"
+                                  android:layout_width="1220px" android:layout_x="0px"
+                                  android:layout_y="1430px">
+                                  <android.view.View
+                                    android:contentDescription="Adobe Acrobat Reader: Edit PDF&#10;2.0 MB&#10;Updated on 22 Sept&#10;"
+                                    android:enabled="true" android:layout_height="125px"
+                                    android:layout_width="518px" android:layout_x="246px"
+                                    android:layout_y="1466px" />
+                                  <android.view.View android:clickable="true"
+                                    android:contentDescription="Expand button"
+                                    android:enabled="true" android:focusable="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="764px" android:layout_y="1457px" />
+                                  <android.view.View android:clickable="true" android:enabled="true"
+                                    android:focusable="true" android:layout_height="144px"
+                                    android:layout_width="240px" android:layout_x="908px"
+                                    android:layout_y="1457px">
+                                    <android.view.View android:contentDescription="Update"
+                                      android:enabled="true" android:layout_height="120px"
+                                      android:layout_width="144px" android:layout_x="956px"
+                                      android:layout_y="1469px">
+                                      <android.widget.TextView android:enabled="true"
+                                        android:layout_height="60px" android:layout_width="144px"
+                                        android:layout_x="956px" android:layout_y="1499px"
+                                        android:text="Update" />
+                                    </android.view.View>
+                                    <android.widget.Button android:enabled="true"
+                                      android:layout_height="120px" android:layout_width="240px"
+                                      android:layout_x="908px" android:layout_y="1469px" />
+                                  </android.view.View>
+                                </android.view.View>
+                                <android.view.View android:clickable="true" android:enabled="true"
+                                  android:focusable="true" android:layout_height="198px"
+                                  android:layout_width="1220px" android:layout_x="0px"
+                                  android:layout_y="1628px">
+                                  <android.view.View
+                                    android:contentDescription="Adobe Express: AI Photo, Video&#10;48 MB&#10;Updated on 29 Aug&#10;"
+                                    android:enabled="true" android:layout_height="125px"
+                                    android:layout_width="518px" android:layout_x="246px"
+                                    android:layout_y="1664px" />
+                                  <android.view.View android:clickable="true"
+                                    android:contentDescription="Expand button"
+                                    android:enabled="true" android:focusable="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="764px" android:layout_y="1655px" />
+                                  <android.view.View android:clickable="true" android:enabled="true"
+                                    android:focusable="true" android:layout_height="144px"
+                                    android:layout_width="240px" android:layout_x="908px"
+                                    android:layout_y="1655px">
+                                    <android.view.View android:contentDescription="Update"
+                                      android:enabled="true" android:layout_height="120px"
+                                      android:layout_width="144px" android:layout_x="956px"
+                                      android:layout_y="1667px">
+                                      <android.widget.TextView android:enabled="true"
+                                        android:layout_height="60px" android:layout_width="144px"
+                                        android:layout_x="956px" android:layout_y="1697px"
+                                        android:text="Update" />
+                                    </android.view.View>
+                                    <android.widget.Button android:enabled="true"
+                                      android:layout_height="120px" android:layout_width="240px"
+                                      android:layout_x="908px" android:layout_y="1667px" />
+                                  </android.view.View>
+                                </android.view.View>
+                                <android.view.View android:clickable="true" android:enabled="true"
+                                  android:focusable="true" android:layout_height="198px"
+                                  android:layout_width="1220px" android:layout_x="0px"
+                                  android:layout_y="1826px">
+                                  <android.view.View
+                                    android:contentDescription="Adobe Scan AI PDF Scanner, OCR&#10;2.4 MB&#10;Updated on 17 Sept&#10;"
+                                    android:enabled="true" android:layout_height="125px"
+                                    android:layout_width="518px" android:layout_x="246px"
+                                    android:layout_y="1862px" />
+                                  <android.view.View android:clickable="true"
+                                    android:contentDescription="Expand button"
+                                    android:enabled="true" android:focusable="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="764px" android:layout_y="1853px" />
+                                  <android.view.View android:clickable="true" android:enabled="true"
+                                    android:focusable="true" android:layout_height="144px"
+                                    android:layout_width="240px" android:layout_x="908px"
+                                    android:layout_y="1853px">
+                                    <android.view.View android:contentDescription="Update"
+                                      android:enabled="true" android:layout_height="120px"
+                                      android:layout_width="144px" android:layout_x="956px"
+                                      android:layout_y="1865px">
+                                      <android.widget.TextView android:enabled="true"
+                                        android:layout_height="60px" android:layout_width="144px"
+                                        android:layout_x="956px" android:layout_y="1895px"
+                                        android:text="Update" />
+                                    </android.view.View>
+                                    <android.widget.Button android:enabled="true"
+                                      android:layout_height="120px" android:layout_width="240px"
+                                      android:layout_x="908px" android:layout_y="1865px" />
+                                  </android.view.View>
+                                </android.view.View>
+                                <android.view.View android:clickable="true" android:enabled="true"
+                                  android:focusable="true" android:layout_height="198px"
+                                  android:layout_width="1220px" android:layout_x="0px"
+                                  android:layout_y="2024px">
+                                  <android.view.View
+                                    android:contentDescription="Agoda: Book Hotels and Flights&#10;9.1 MB&#10;Updated on 22 Sept&#10;"
+                                    android:enabled="true" android:layout_height="125px"
+                                    android:layout_width="518px" android:layout_x="246px"
+                                    android:layout_y="2060px" />
+                                  <android.view.View android:clickable="true"
+                                    android:contentDescription="Expand button"
+                                    android:enabled="true" android:focusable="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="764px" android:layout_y="2051px" />
+                                  <android.view.View android:clickable="true" android:enabled="true"
+                                    android:focusable="true" android:layout_height="144px"
+                                    android:layout_width="240px" android:layout_x="908px"
+                                    android:layout_y="2051px">
+                                    <android.view.View android:contentDescription="Update"
+                                      android:enabled="true" android:layout_height="120px"
+                                      android:layout_width="144px" android:layout_x="956px"
+                                      android:layout_y="2063px">
+                                      <android.widget.TextView android:enabled="true"
+                                        android:layout_height="60px" android:layout_width="144px"
+                                        android:layout_x="956px" android:layout_y="2093px"
+                                        android:text="Update" />
+                                    </android.view.View>
+                                    <android.widget.Button android:enabled="true"
+                                      android:layout_height="120px" android:layout_width="240px"
+                                      android:layout_x="908px" android:layout_y="2063px" />
+                                  </android.view.View>
+                                </android.view.View>
+                                <android.view.View android:clickable="true" android:enabled="true"
+                                  android:focusable="true" android:layout_height="198px"
+                                  android:layout_width="1220px" android:layout_x="0px"
+                                  android:layout_y="2222px">
+                                  <android.view.View
+                                    android:contentDescription="Airbnb&#10;21 MB&#10;Updated on 22 Sept&#10;"
+                                    android:enabled="true" android:layout_height="125px"
+                                    android:layout_width="518px" android:layout_x="246px"
+                                    android:layout_y="2258px" />
+                                  <android.view.View android:clickable="true"
+                                    android:contentDescription="Expand button"
+                                    android:enabled="true" android:focusable="true"
+                                    android:layout_height="144px" android:layout_width="144px"
+                                    android:layout_x="764px" android:layout_y="2249px" />
+                                  <android.view.View android:clickable="true" android:enabled="true"
+                                    android:focusable="true" android:layout_height="144px"
+                                    android:layout_width="240px" android:layout_x="908px"
+                                    android:layout_y="2249px">
+                                    <android.view.View android:contentDescription="Update"
+                                      android:enabled="true" android:layout_height="120px"
+                                      android:layout_width="144px" android:layout_x="956px"
+                                      android:layout_y="2261px">
+                                      <android.widget.TextView android:enabled="true"
+                                        android:layout_height="60px" android:layout_width="144px"
+                                        android:layout_x="956px" android:layout_y="2291px"
+                                        android:text="Update" />
+                                    </android.view.View>
+                                    <android.widget.Button android:enabled="true"
+                                      android:layout_height="120px" android:layout_width="240px"
+                                      android:layout_x="908px" android:layout_y="2261px" />
+                                  </android.view.View>
+                                </android.view.View>
+                                <android.view.View android:clickable="true" android:enabled="true"
+                                  android:focusable="true" android:layout_height="150px"
+                                  android:layout_width="1220px" android:layout_x="0px"
+                                  android:layout_y="2420px">
+                                  <android.view.View
+                                    android:contentDescription="Algorithms and Data Structures&#10;16 MB&#10;Updated on 17 Sept&#10;"
+                                    android:enabled="true" android:layout_height="114px"
+                                    android:layout_width="518px" android:layout_x="246px"
+                                    android:layout_y="2456px" />
+                                  <android.view.View android:clickable="true"
+                                    android:contentDescription="Expand button"
+                                    android:enabled="true" android:focusable="true"
+                                    android:layout_height="123px" android:layout_width="144px"
+                                    android:layout_x="764px" android:layout_y="2447px" />
+                                  <android.view.View android:clickable="true" android:enabled="true"
+                                    android:focusable="true" android:layout_height="123px"
+                                    android:layout_width="240px" android:layout_x="908px"
+                                    android:layout_y="2447px">
+                                    <android.view.View android:contentDescription="Update"
+                                      android:enabled="true" android:layout_height="111px"
+                                      android:layout_width="144px" android:layout_x="956px"
+                                      android:layout_y="2459px">
+                                      <android.widget.TextView android:enabled="true"
+                                        android:layout_height="60px" android:layout_width="144px"
+                                        android:layout_x="956px" android:layout_y="2489px"
+                                        android:text="Update" />
+                                    </android.view.View>
+                                    <android.widget.Button android:enabled="true"
+                                      android:layout_height="111px" android:layout_width="240px"
+                                      android:layout_x="908px" android:layout_y="2459px" />
+                                  </android.view.View>
+                                </android.view.View>
+                              </android.view.View>
+                            </android.view.View>
+                            <android.widget.TextView android:enabled="true"
+                              android:layout_height="72px" android:layout_width="589px"
+                              android:layout_x="72px" android:layout_y="320px"
+                              android:text="Available updates (304)" />
+                            <android.view.View android:clickable="true" android:enabled="true"
+                              android:focusable="true" android:layout_height="144px"
+                              android:layout_width="297px" android:layout_x="851px"
+                              android:layout_y="284px">
+                              <android.view.View android:contentDescription="Update all"
+                                android:enabled="true" android:layout_height="120px"
+                                android:layout_width="201px" android:layout_x="899px"
+                                android:layout_y="296px">
+                                <android.widget.TextView android:enabled="true"
+                                  android:layout_height="60px" android:layout_width="201px"
+                                  android:layout_x="899px" android:layout_y="326px"
+                                  android:text="Update all" />
+                              </android.view.View>
+                              <android.widget.Button android:enabled="true"
+                                android:layout_height="120px" android:layout_width="297px"
+                                android:layout_x="851px" android:layout_y="296px" />
+                            </android.view.View>
+                          </android.view.View>
+                        </android.view.View>
+                        <android.view.View android:enabled="true" android:layout_height="168px"
+                          android:layout_width="1220px" android:layout_x="0px"
+                          android:layout_y="104px">
+                          <android.view.View android:enabled="true" android:layout_height="168px"
+                            android:layout_width="1220px" android:layout_x="0px"
+                            android:layout_y="104px">
+                            <android.view.View android:enabled="true" android:layout_height="144px"
+                              android:layout_width="144px" android:layout_x="12px"
+                              android:layout_y="116px">
+                              <android.view.View android:clickable="true" android:enabled="true"
+                                android:focusable="true" android:layout_height="144px"
+                                android:layout_width="144px" android:layout_x="12px"
+                                android:layout_y="116px" android:longClickable="true">
+                                <android.view.View android:contentDescription="Navigate up"
+                                  android:enabled="true" android:layout_height="72px"
+                                  android:layout_width="72px" android:layout_x="48px"
+                                  android:layout_y="152px" />
+                                <android.widget.Button android:enabled="true"
+                                  android:layout_height="120px" android:layout_width="120px"
+                                  android:layout_x="24px" android:layout_y="128px" />
+                              </android.view.View>
+                            </android.view.View>
+                            <android.view.View android:enabled="true" android:layout_height="144px"
+                              android:layout_width="1028px" android:layout_x="168px"
+                              android:layout_y="116px">
+                              <android.widget.TextView android:enabled="true"
+                                android:layout_height="84px" android:layout_width="330px"
+                                android:layout_x="168px" android:layout_y="146px"
+                                android:text="Downloads" />
+                            </android.view.View>
+                          </android.view.View>
+                        </android.view.View>
+                      </android.view.View>
+                    </android.view.View>
+                  </android.view.View>
+                  <android.view.View android:enabled="true" android:layout_height="142px"
+                    android:layout_width="1220px" android:layout_x="0px" android:layout_y="2570px">
+                    <android.view.View android:columnCount="5" android:enabled="true"
+                      android:layout_height="142px" android:layout_width="1220px"
+                      android:layout_x="0px" android:layout_y="2570px" android:rowCount="1">
+                      <android.view.View android:clickable="true" android:layout_column="0"
+                        android:layout_height="142px" android:layout_row="0"
+                        android:layout_width="244px" android:layout_x="0px"
+                        android:layout_y="2570px">
+                        <android.view.View android:enabled="true" android:layout_height="144px"
+                          android:layout_width="168px" android:layout_x="38px"
+                          android:layout_y="2564px">
+                          <iuk android:enabled="true" android:layout_height="72px"
+                            android:layout_width="72px" android:layout_x="86px"
+                            android:layout_y="2600px">
+                            <android.widget.ImageView android:enabled="true"
+                              android:layout_height="72px" android:layout_width="72px"
+                              android:layout_x="86px" android:layout_y="2600px" />
+                          </iuk>
+                        </android.view.View>
+                        <android.widget.TextView android:enabled="true" android:layout_height="16px"
+                          android:layout_width="120px" android:layout_x="62px"
+                          android:layout_y="2696px" android:text="Games" />
+                        <android.view.View android:enabled="true" android:layout_height="192px"
+                          android:layout_width="244px" android:layout_x="0px"
+                          android:layout_y="2570px" />
+                      </android.view.View>
+                      <android.view.View android:layout_column="1" android:layout_height="142px"
+                        android:layout_row="0" android:layout_width="244px" android:layout_x="244px"
+                        android:layout_y="2570px" android:selected="true">
+                        <android.view.View android:enabled="true" android:layout_height="144px"
+                          android:layout_width="168px" android:layout_x="282px"
+                          android:layout_y="2564px">
+                          <iuk android:enabled="true" android:layout_height="72px"
+                            android:layout_width="72px" android:layout_x="330px"
+                            android:layout_y="2600px">
+                            <android.widget.ImageView android:enabled="true"
+                              android:layout_height="72px" android:layout_width="72px"
+                              android:layout_x="330px" android:layout_y="2600px"
+                              android:selected="true" />
+                          </iuk>
+                        </android.view.View>
+                        <android.widget.TextView android:enabled="true" android:layout_height="16px"
+                          android:layout_width="88px" android:layout_x="322px"
+                          android:layout_y="2696px" android:text="Apps" />
+                        <android.view.View android:enabled="true" android:layout_height="192px"
+                          android:layout_width="244px" android:layout_x="244px"
+                          android:layout_y="2570px" />
+                      </android.view.View>
+                      <android.view.View android:clickable="true" android:layout_column="2"
+                        android:layout_height="142px" android:layout_row="0"
+                        android:layout_width="244px" android:layout_x="488px"
+                        android:layout_y="2570px">
+                        <android.view.View android:enabled="true" android:layout_height="144px"
+                          android:layout_width="168px" android:layout_x="526px"
+                          android:layout_y="2564px">
+                          <iuk android:enabled="true" android:layout_height="72px"
+                            android:layout_width="72px" android:layout_x="574px"
+                            android:layout_y="2600px">
+                            <android.widget.ImageView android:enabled="true"
+                              android:layout_height="72px" android:layout_width="72px"
+                              android:layout_x="574px" android:layout_y="2600px" />
+                          </iuk>
+                        </android.view.View>
+                        <android.widget.TextView android:enabled="true" android:layout_height="16px"
+                          android:layout_width="122px" android:layout_x="549px"
+                          android:layout_y="2696px" android:text="Search" />
+                        <android.view.View android:enabled="true" android:layout_height="192px"
+                          android:layout_width="244px" android:layout_x="488px"
+                          android:layout_y="2570px" />
+                      </android.view.View>
+                      <android.view.View android:clickable="true" android:layout_column="3"
+                        android:layout_height="142px" android:layout_row="0"
+                        android:layout_width="244px" android:layout_x="732px"
+                        android:layout_y="2570px">
+                        <android.view.View android:enabled="true" android:layout_height="144px"
+                          android:layout_width="168px" android:layout_x="770px"
+                          android:layout_y="2564px">
+                          <iuk android:enabled="true" android:layout_height="72px"
+                            android:layout_width="72px" android:layout_x="818px"
+                            android:layout_y="2600px">
+                            <android.widget.ImageView android:enabled="true"
+                              android:layout_height="72px" android:layout_width="72px"
+                              android:layout_x="818px" android:layout_y="2600px" />
+                          </iuk>
+                        </android.view.View>
+                        <android.widget.TextView android:enabled="true" android:layout_height="16px"
+                          android:layout_width="108px" android:layout_x="800px"
+                          android:layout_y="2696px" android:text="Offers" />
+                        <android.view.View android:enabled="true" android:layout_height="192px"
+                          android:layout_width="244px" android:layout_x="732px"
+                          android:layout_y="2570px" />
+                      </android.view.View>
+                      <android.view.View android:clickable="true" android:layout_column="4"
+                        android:layout_height="142px" android:layout_row="0"
+                        android:layout_width="244px" android:layout_x="976px"
+                        android:layout_y="2570px">
+                        <android.view.View android:enabled="true" android:layout_height="144px"
+                          android:layout_width="168px" android:layout_x="1014px"
+                          android:layout_y="2564px">
+                          <iuk android:enabled="true" android:layout_height="72px"
+                            android:layout_width="72px" android:layout_x="1062px"
+                            android:layout_y="2600px">
+                            <android.widget.ImageView android:enabled="true"
+                              android:layout_height="72px" android:layout_width="72px"
+                              android:layout_x="1062px" android:layout_y="2600px" />
+                          </iuk>
+                        </android.view.View>
+                        <android.widget.TextView android:enabled="true" android:layout_height="16px"
+                          android:layout_width="107px" android:layout_x="1045px"
+                          android:layout_y="2696px" android:text="Books" />
+                        <android.view.View android:enabled="true" android:layout_height="192px"
+                          android:layout_width="244px" android:layout_x="976px"
+                          android:layout_y="2570px" />
+                      </android.view.View>
+                    </android.view.View>
+                  </android.view.View>
+                </android.view.View>
+              </androidx.compose.ui.platform.ComposeView>
+            </android.widget.FrameLayout>
+            <android.widget.FrameLayout android:enabled="true"
+              android:id="@com.android.vending:id/0_resource_name_obfuscated"
+              android:layout_height="104px" android:layout_width="1220px" android:layout_x="0px"
+              android:layout_y="0px">
+              <android.widget.FrameLayout android:enabled="true"
+                android:id="@com.android.vending:id/0_resource_name_obfuscated"
+                android:layout_height="0px" android:layout_width="1220px" android:layout_x="0px"
+                android:layout_y="104px" />
+            </android.widget.FrameLayout>
+          </android.widget.FrameLayout>
+        </android.widget.FrameLayout>
+      </android.widget.FrameLayout>
+    </android.widget.FrameLayout>
+  </android.widget.LinearLayout>
+  <android.view.View android:enabled="true" android:id="@android:id/statusBarBackground"
+    android:layout_height="104px" android:layout_width="1220px" android:layout_x="0px"
+    android:layout_y="0px" />
+  <android.view.View android:enabled="true" android:id="@android:id/navigationBarBackground"
+    android:layout_height="142px" android:layout_width="1220px" android:layout_x="0px"
+    android:layout_y="2570px" />
+</android.widget.FrameLayout>
