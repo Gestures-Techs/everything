@@ -1,167 +1,542 @@
-<?xml version="1.0" encoding="UTF-8"?><android.widget.FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-  <android.widget.LinearLayout android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-    <android.widget.FrameLayout android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-      <android.widget.LinearLayout android:enabled="true" android:id="@com.blockchainvault:id/action_bar_root" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-        <android.widget.FrameLayout android:enabled="true" android:id="@android:id/content" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-          <android.widget.FrameLayout android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-            <android.view.ViewGroup android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-              <android.view.ViewGroup android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                <android.view.ViewGroup android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                  <android.widget.FrameLayout android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                    <android.webkit.WebView android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                      <android.webkit.WebView android:enabled="true" android:focusable="true" android:focused="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px" android:text="Pi">
-                        <android.view.View android:enabled="true" android:layout_height="0px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                          <android.view.View android:enabled="true" android:id="@root" android:layout_height="0px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                            <android.view.View android:enabled="true" android:layout_height="0px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                              <android.view.View android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                <android.view.View android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                  <android.view.View android:enabled="true" android:layout_height="273px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                    <android.view.View android:enabled="true" android:layout_height="273px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                      <android.view.View android:enabled="true" android:layout_height="171px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="102px">
-                                        <android.widget.Button android:clickable="true" android:contentDescription="Open drawer" android:enabled="true" android:focusable="true" android:layout_height="123px" android:layout_width="120px" android:layout_x="48px" android:layout_y="126px"/>
-                                        <android.view.View android:enabled="true" android:layout_height="75px" android:layout_width="216px" android:layout_x="957px" android:layout_y="150px">
-                                          <android.widget.TextView android:enabled="true" android:layout_height="75px" android:layout_width="60px" android:layout_x="957px" android:layout_y="150px" android:text="EN"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<android.widget.FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:enabled="true" android:layout_height="2712px" android:layout_width="1220px"
+  android:layout_x="0px" android:layout_y="0px">
+  <android.widget.LinearLayout android:enabled="true" android:layout_height="2712px"
+    android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+    <android.widget.FrameLayout android:enabled="true" android:layout_height="2712px"
+      android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+      <android.widget.LinearLayout android:enabled="true"
+        android:id="@com.blockchainvault:id/action_bar_root" android:layout_height="2712px"
+        android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+        <android.widget.FrameLayout android:enabled="true" android:id="@android:id/content"
+          android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px"
+          android:layout_y="0px">
+          <android.widget.FrameLayout android:enabled="true" android:layout_height="2712px"
+            android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+            <android.view.ViewGroup android:enabled="true" android:layout_height="2712px"
+              android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+              <android.view.ViewGroup android:enabled="true" android:layout_height="2712px"
+                android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+                <android.view.ViewGroup android:enabled="true" android:layout_height="2712px"
+                  android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+                  <android.widget.FrameLayout android:enabled="true" android:layout_height="2712px"
+                    android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+                    <android.webkit.WebView android:enabled="true" android:layout_height="2712px"
+                      android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
+                      <android.webkit.WebView android:enabled="true" android:focusable="true"
+                        android:focused="true" android:layout_height="2712px"
+                        android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px"
+                        android:text="Pi">
+                        <android.view.View android:enabled="true" android:layout_height="0px"
+                          android:layout_width="1220px" android:layout_x="0px"
+                          android:layout_y="0px">
+                          <android.view.View android:enabled="true" android:id="@root"
+                            android:layout_height="0px" android:layout_width="1220px"
+                            android:layout_x="0px" android:layout_y="0px">
+                            <android.view.View android:enabled="true" android:layout_height="0px"
+                              android:layout_width="1220px" android:layout_x="0px"
+                              android:layout_y="0px">
+                              <android.view.View android:enabled="true"
+                                android:layout_height="2712px" android:layout_width="1220px"
+                                android:layout_x="0px" android:layout_y="0px">
+                                <android.view.View android:enabled="true"
+                                  android:layout_height="2712px" android:layout_width="1220px"
+                                  android:layout_x="0px" android:layout_y="0px">
+                                  <android.view.View android:enabled="true"
+                                    android:layout_height="273px" android:layout_width="1220px"
+                                    android:layout_x="0px" android:layout_y="0px">
+                                    <android.view.View android:enabled="true"
+                                      android:layout_height="273px" android:layout_width="1220px"
+                                      android:layout_x="0px" android:layout_y="0px">
+                                      <android.view.View android:enabled="true"
+                                        android:layout_height="171px" android:layout_width="1220px"
+                                        android:layout_x="0px" android:layout_y="102px">
+                                        <android.widget.Button android:clickable="true"
+                                          android:contentDescription="Open drawer"
+                                          android:enabled="true" android:focusable="true"
+                                          android:layout_height="123px" android:layout_width="120px"
+                                          android:layout_x="48px" android:layout_y="126px" />
+                                        <android.view.View android:enabled="true"
+                                          android:layout_height="75px" android:layout_width="216px"
+                                          android:layout_x="957px" android:layout_y="150px">
+                                          <android.widget.TextView android:enabled="true"
+                                            android:layout_height="75px" android:layout_width="60px"
+                                            android:layout_x="957px" android:layout_y="150px"
+                                            android:text="EN" />
                                         </android.view.View>
                                       </android.view.View>
                                     </android.view.View>
                                   </android.view.View>
-                                  <android.view.View android:enabled="true" android:layout_height="2454px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                    <android.view.View android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px" android:scrollable="true">
-                                      <android.view.View android:enabled="true" android:focusable="true" android:id="@widget2" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                        <android.view.View android:enabled="true" android:focusable="true" android:focused="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px" android:text="Explore Pi Network DEX and AMM on Pi Testnet! - YouTube">
-                                          <android.view.View android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                            <android.widget.TextView android:enabled="true" android:id="@global-loader" android:layout_height="0px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px"/>
-                                            <android.view.View android:enabled="true" android:id="@player" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                              <android.view.View android:enabled="true" android:id="@movie_player" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px" android:text="YouTube Video Player">
-                                                <android.widget.TextView android:enabled="true" android:layout_height="0px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px"/>
+                                  <android.view.View android:enabled="true"
+                                    android:layout_height="2454px" android:layout_width="1220px"
+                                    android:layout_x="0px" android:layout_y="0px">
+                                    <android.view.View android:enabled="true"
+                                      android:layout_height="2712px" android:layout_width="1220px"
+                                      android:layout_x="0px" android:layout_y="0px"
+                                      android:scrollable="true">
+                                      <android.view.View android:enabled="true"
+                                        android:focusable="true" android:id="@widget2"
+                                        android:layout_height="2712px" android:layout_width="1220px"
+                                        android:layout_x="0px" android:layout_y="0px">
+                                        <android.view.View android:enabled="true"
+                                          android:focusable="true" android:focused="true"
+                                          android:layout_height="2712px"
+                                          android:layout_width="1220px" android:layout_x="0px"
+                                          android:layout_y="0px"
+                                          android:text="Explore Pi Network DEX and AMM on Pi Testnet! - YouTube">
+                                          <android.view.View android:enabled="true"
+                                            android:layout_height="2712px"
+                                            android:layout_width="1220px" android:layout_x="0px"
+                                            android:layout_y="0px">
+                                            <android.widget.TextView android:enabled="true"
+                                              android:id="@global-loader"
+                                              android:layout_height="0px"
+                                              android:layout_width="1220px" android:layout_x="0px"
+                                              android:layout_y="0px" />
+                                            <android.view.View android:enabled="true"
+                                              android:id="@player" android:layout_height="2712px"
+                                              android:layout_width="1220px" android:layout_x="0px"
+                                              android:layout_y="0px">
+                                              <android.view.View android:enabled="true"
+                                                android:id="@movie_player"
+                                                android:layout_height="2712px"
+                                                android:layout_width="1220px" android:layout_x="0px"
+                                                android:layout_y="0px"
+                                                android:text="YouTube Video Player">
+                                                <android.widget.TextView android:enabled="true"
+                                                  android:layout_height="0px"
+                                                  android:layout_width="1220px"
+                                                  android:layout_x="0px" android:layout_y="0px" />
                                               </android.view.View>
                                             </android.view.View>
-                                            <android.view.View android:enabled="true" android:id="@player-controls" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                              <android.view.View android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                                <android.widget.TextView android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px"/>
-                                                <android.view.View android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                                  <android.widget.TextView android:enabled="true" android:layout_height="210px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px"/>
-                                                  <android.widget.Button android:clickable="true" android:contentDescription="Play video" android:enabled="true" android:focusable="true" android:layout_height="216px" android:layout_width="219px" android:layout_x="501px" android:layout_y="1248px"/>
+                                            <android.view.View android:enabled="true"
+                                              android:id="@player-controls"
+                                              android:layout_height="2712px"
+                                              android:layout_width="1220px" android:layout_x="0px"
+                                              android:layout_y="0px">
+                                              <android.view.View android:enabled="true"
+                                                android:layout_height="2712px"
+                                                android:layout_width="1220px" android:layout_x="0px"
+                                                android:layout_y="0px">
+                                                <android.widget.TextView android:enabled="true"
+                                                  android:layout_height="2712px"
+                                                  android:layout_width="1220px"
+                                                  android:layout_x="0px" android:layout_y="0px" />
+                                                <android.view.View android:enabled="true"
+                                                  android:layout_height="2712px"
+                                                  android:layout_width="1220px"
+                                                  android:layout_x="0px" android:layout_y="0px">
+                                                  <android.widget.TextView android:enabled="true"
+                                                    android:layout_height="210px"
+                                                    android:layout_width="1220px"
+                                                    android:layout_x="0px" android:layout_y="0px" />
+                                                  <android.widget.Button android:clickable="true"
+                                                    android:contentDescription="Play video"
+                                                    android:enabled="true" android:focusable="true"
+                                                    android:layout_height="216px"
+                                                    android:layout_width="219px"
+                                                    android:layout_x="501px"
+                                                    android:layout_y="1248px" />
                                                 </android.view.View>
-                                                <android.widget.Button android:clickable="true" android:contentDescription="Hide player controls" android:enabled="true" android:focusable="true" android:id="@player-controls-a11y-toggle" android:layout_height="36px" android:layout_width="36px" android:layout_x="0px" android:layout_y="0px"/>
-                                                <android.view.View android:enabled="true" android:id="@player-control-overlay" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                                  <android.view.View android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                                    <android.widget.TextView android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px"/>
-                                                    <android.widget.TextView android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px"/>
+                                                <android.widget.Button android:clickable="true"
+                                                  android:contentDescription="Hide player controls"
+                                                  android:enabled="true" android:focusable="true"
+                                                  android:id="@player-controls-a11y-toggle"
+                                                  android:layout_height="36px"
+                                                  android:layout_width="36px" android:layout_x="0px"
+                                                  android:layout_y="0px" />
+                                                <android.view.View android:enabled="true"
+                                                  android:id="@player-control-overlay"
+                                                  android:layout_height="2712px"
+                                                  android:layout_width="1220px"
+                                                  android:layout_x="0px" android:layout_y="0px">
+                                                  <android.view.View android:enabled="true"
+                                                    android:layout_height="2712px"
+                                                    android:layout_width="1220px"
+                                                    android:layout_x="0px" android:layout_y="0px">
+                                                    <android.widget.TextView android:enabled="true"
+                                                      android:layout_height="2712px"
+                                                      android:layout_width="1220px"
+                                                      android:layout_x="0px" android:layout_y="0px" />
+                                                    <android.widget.TextView android:enabled="true"
+                                                      android:layout_height="2712px"
+                                                      android:layout_width="1220px"
+                                                      android:layout_x="0px" android:layout_y="0px" />
                                                   </android.view.View>
-                                                  <android.view.View android:enabled="true" android:layout_height="156px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                                    <android.view.View android:enabled="true" android:layout_height="156px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                                      <android.view.View android:clickable="true" android:contentDescription="Explore Pi Network DEX and AMM on Pi Testnet!" android:enabled="true" android:focusable="true" android:layout_height="108px" android:layout_width="993px" android:layout_x="192px" android:layout_y="0px">
-                                                        <android.widget.TextView android:enabled="true" android:layout_height="66px" android:layout_width="1028px" android:layout_x="192px" android:layout_y="36px" android:text="Explore Pi Network DEX and AMM on Pi Testnet!"/>
+                                                  <android.view.View android:enabled="true"
+                                                    android:layout_height="156px"
+                                                    android:layout_width="1220px"
+                                                    android:layout_x="0px" android:layout_y="0px">
+                                                    <android.view.View android:enabled="true"
+                                                      android:layout_height="156px"
+                                                      android:layout_width="1220px"
+                                                      android:layout_x="0px" android:layout_y="0px">
+                                                      <android.view.View android:clickable="true"
+                                                        android:contentDescription="Explore Pi Network DEX and AMM on Pi Testnet!"
+                                                        android:enabled="true"
+                                                        android:focusable="true"
+                                                        android:layout_height="108px"
+                                                        android:layout_width="993px"
+                                                        android:layout_x="192px"
+                                                        android:layout_y="0px">
+                                                        <android.widget.TextView
+                                                          android:enabled="true"
+                                                          android:layout_height="66px"
+                                                          android:layout_width="1028px"
+                                                          android:layout_x="192px"
+                                                          android:layout_y="36px"
+                                                          android:text="Explore Pi Network DEX and AMM on Pi Testnet!" />
                                                       </android.view.View>
-                                                      <android.view.View android:clickable="true" android:contentDescription="Pi Network" android:enabled="true" android:focusable="true" android:layout_height="42px" android:layout_width="993px" android:layout_x="192px" android:layout_y="108px">
-                                                        <android.widget.TextView android:enabled="true" android:layout_height="45px" android:layout_width="177px" android:layout_x="192px" android:layout_y="105px" android:text="Pi Network"/>
+                                                      <android.view.View android:clickable="true"
+                                                        android:contentDescription="Pi Network"
+                                                        android:enabled="true"
+                                                        android:focusable="true"
+                                                        android:layout_height="42px"
+                                                        android:layout_width="993px"
+                                                        android:layout_x="192px"
+                                                        android:layout_y="108px">
+                                                        <android.widget.TextView
+                                                          android:enabled="true"
+                                                          android:layout_height="45px"
+                                                          android:layout_width="177px"
+                                                          android:layout_x="192px"
+                                                          android:layout_y="105px"
+                                                          android:text="Pi Network" />
                                                       </android.view.View>
-                                                      <android.view.View android:enabled="true" android:layout_height="156px" android:layout_width="198px" android:layout_x="12px" android:layout_y="24px">
-                                                        <android.widget.Button android:clickable="true" android:enabled="true" android:focusable="true" android:layout_height="144px" android:layout_width="144px" android:layout_x="12px" android:layout_y="24px" android:text="thumbnail-image"/>
-                                                        <android.widget.TextView android:enabled="true" android:layout_height="156px" android:layout_width="186px" android:layout_x="24px" android:layout_y="24px" android:text="Pi Network19.2 lakh subscribers"/>
+                                                      <android.view.View android:enabled="true"
+                                                        android:layout_height="156px"
+                                                        android:layout_width="198px"
+                                                        android:layout_x="12px"
+                                                        android:layout_y="24px">
+                                                        <android.widget.Button
+                                                          android:clickable="true"
+                                                          android:enabled="true"
+                                                          android:focusable="true"
+                                                          android:layout_height="144px"
+                                                          android:layout_width="144px"
+                                                          android:layout_x="12px"
+                                                          android:layout_y="24px"
+                                                          android:text="thumbnail-image" />
+                                                        <android.widget.TextView
+                                                          android:enabled="true"
+                                                          android:layout_height="156px"
+                                                          android:layout_width="186px"
+                                                          android:layout_x="24px"
+                                                          android:layout_y="24px"
+                                                          android:text="Pi Network19.2 lakh subscribers" />
                                                       </android.view.View>
                                                     </android.view.View>
                                                   </android.view.View>
-                                                  <android.view.View android:enabled="true" android:layout_height="120px" android:layout_width="1149px" android:layout_x="36px" android:layout_y="2556px">
-                                                    <android.view.View android:enabled="true" android:layout_height="120px" android:layout_width="1149px" android:layout_x="36px" android:layout_y="2556px">
-                                                      <android.view.View android:enabled="true" android:layout_height="120px" android:layout_width="144px" android:layout_x="36px" android:layout_y="2556px">
-                                                        <android.widget.Button android:clickable="true" android:contentDescription="Share" android:enabled="true" android:focusable="true" android:layout_height="120px" android:layout_width="120px" android:layout_x="36px" android:layout_y="2556px"/>
+                                                  <android.view.View android:enabled="true"
+                                                    android:layout_height="120px"
+                                                    android:layout_width="1149px"
+                                                    android:layout_x="36px"
+                                                    android:layout_y="2556px">
+                                                    <android.view.View android:enabled="true"
+                                                      android:layout_height="120px"
+                                                      android:layout_width="1149px"
+                                                      android:layout_x="36px"
+                                                      android:layout_y="2556px">
+                                                      <android.view.View android:enabled="true"
+                                                        android:layout_height="120px"
+                                                        android:layout_width="144px"
+                                                        android:layout_x="36px"
+                                                        android:layout_y="2556px">
+                                                        <android.widget.Button
+                                                          android:clickable="true"
+                                                          android:contentDescription="Share"
+                                                          android:enabled="true"
+                                                          android:focusable="true"
+                                                          android:layout_height="120px"
+                                                          android:layout_width="120px"
+                                                          android:layout_x="36px"
+                                                          android:layout_y="2556px" />
                                                       </android.view.View>
-                                                      <android.view.View android:clickable="true" android:contentDescription="Watch on YouTube" android:enabled="true" android:focusable="true" android:layout_height="144px" android:layout_width="642px" android:layout_x="543px" android:layout_y="2544px" android:text="watch?v=tzEQ5rNOCe8">
-                                                        <android.widget.TextView android:enabled="true" android:layout_height="144px" android:layout_width="498px" android:layout_x="615px" android:layout_y="2544px" android:text="Watch on"/>
+                                                      <android.view.View android:clickable="true"
+                                                        android:contentDescription="Watch on YouTube"
+                                                        android:enabled="true"
+                                                        android:focusable="true"
+                                                        android:layout_height="144px"
+                                                        android:layout_width="642px"
+                                                        android:layout_x="543px"
+                                                        android:layout_y="2544px"
+                                                        android:text="watch?v=tzEQ5rNOCe8">
+                                                        <android.widget.TextView
+                                                          android:enabled="true"
+                                                          android:layout_height="144px"
+                                                          android:layout_width="498px"
+                                                          android:layout_x="615px"
+                                                          android:layout_y="2544px"
+                                                          android:text="Watch on" />
                                                       </android.view.View>
                                                     </android.view.View>
                                                   </android.view.View>
-                                                  <android.widget.TextView android:enabled="true" android:layout_height="0px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="2712px"/>
+                                                  <android.widget.TextView android:enabled="true"
+                                                    android:layout_height="0px"
+                                                    android:layout_width="1220px"
+                                                    android:layout_x="0px" android:layout_y="2712px" />
                                                 </android.view.View>
                                               </android.view.View>
                                             </android.view.View>
-                                            <android.view.View android:enabled="true" android:id="@bottom-sheet-wrapper" android:layout_height="0px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="2712px">
-                                              <android.app.Dialog android:enabled="true" android:layout_height="0px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="2712px" android:text="Dialogue"/>
-                                              <android.app.Dialog android:enabled="true" android:layout_height="0px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="2712px" android:text="Dialogue"/>
+                                            <android.view.View android:enabled="true"
+                                              android:id="@bottom-sheet-wrapper"
+                                              android:layout_height="0px"
+                                              android:layout_width="1220px" android:layout_x="0px"
+                                              android:layout_y="2712px">
+                                              <android.app.Dialog android:enabled="true"
+                                                android:layout_height="0px"
+                                                android:layout_width="1220px" android:layout_x="0px"
+                                                android:layout_y="2712px" android:text="Dialogue" />
+                                              <android.app.Dialog android:enabled="true"
+                                                android:layout_height="0px"
+                                                android:layout_width="1220px" android:layout_x="0px"
+                                                android:layout_y="2712px" android:text="Dialogue" />
                                             </android.view.View>
                                           </android.view.View>
                                         </android.view.View>
                                       </android.view.View>
-                                      <android.widget.TextView android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px"/>
+                                      <android.widget.TextView android:enabled="true"
+                                        android:layout_height="2712px" android:layout_width="1220px"
+                                        android:layout_x="0px" android:layout_y="0px" />
                                     </android.view.View>
-                                    <android.widget.TextView android:enabled="true" android:layout_height="0px" android:layout_width="1184px" android:layout_x="36px" android:layout_y="270px"/>
-                                    <android.widget.TextView android:enabled="true" android:layout_height="0px" android:layout_width="1184px" android:layout_x="36px" android:layout_y="270px"/>
-                                    <android.view.View android:enabled="true" android:layout_height="63px" android:layout_width="0px" android:layout_x="0px" android:layout_y="276px" android:text="&#10;"/>
-                                    <android.view.View android:enabled="true" android:layout_height="2442px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="270px">
-                                      <android.view.View android:enabled="true" android:layout_height="171px" android:layout_width="195px" android:layout_x="1008px" android:layout_y="294px">
-                                        <android.widget.TextView android:enabled="true" android:layout_height="75px" android:layout_width="195px" android:layout_x="1008px" android:layout_y="372px" android:text="Chat"/>
+                                    <android.widget.TextView android:enabled="true"
+                                      android:layout_height="0px" android:layout_width="1184px"
+                                      android:layout_x="36px" android:layout_y="270px" />
+                                    <android.widget.TextView android:enabled="true"
+                                      android:layout_height="0px" android:layout_width="1184px"
+                                      android:layout_x="36px" android:layout_y="270px" />
+                                    <android.view.View android:enabled="true"
+                                      android:layout_height="63px" android:layout_width="0px"
+                                      android:layout_x="0px" android:layout_y="276px"
+                                      android:text="&#10;" />
+                                    <android.view.View android:enabled="true"
+                                      android:layout_height="2442px" android:layout_width="1220px"
+                                      android:layout_x="0px" android:layout_y="270px">
+                                      <android.view.View android:enabled="true"
+                                        android:layout_height="171px" android:layout_width="195px"
+                                        android:layout_x="1008px" android:layout_y="294px">
+                                        <android.widget.TextView android:enabled="true"
+                                          android:layout_height="75px" android:layout_width="195px"
+                                          android:layout_x="1008px" android:layout_y="372px"
+                                          android:text="Chat" />
                                       </android.view.View>
-                                      <android.view.View android:enabled="true" android:layout_height="171px" android:layout_width="195px" android:layout_x="1008px" android:layout_y="510px">
-                                        <android.widget.TextView android:enabled="true" android:layout_height="75px" android:layout_width="195px" android:layout_x="1008px" android:layout_y="606px" android:text="20%"/>
+                                      <android.view.View android:enabled="true"
+                                        android:layout_height="171px" android:layout_width="195px"
+                                        android:layout_x="1008px" android:layout_y="510px">
+                                        <android.widget.TextView android:enabled="true"
+                                          android:layout_height="75px" android:layout_width="195px"
+                                          android:layout_x="1008px" android:layout_y="606px"
+                                          android:text="20%" />
                                       </android.view.View>
-                                      <android.view.View android:enabled="true" android:layout_height="171px" android:layout_width="195px" android:layout_x="1008px" android:layout_y="726px">
-                                        <android.widget.TextView android:enabled="true" android:layout_height="75px" android:layout_width="195px" android:layout_x="1008px" android:layout_y="822px" android:text="&#10;"/>
+                                      <android.view.View android:enabled="true"
+                                        android:layout_height="171px" android:layout_width="195px"
+                                        android:layout_x="1008px" android:layout_y="726px">
+                                        <android.widget.TextView android:enabled="true"
+                                          android:layout_height="75px" android:layout_width="195px"
+                                          android:layout_x="1008px" android:layout_y="822px"
+                                          android:text="&#10;" />
                                       </android.view.View>
-                                      <android.view.View android:enabled="true" android:layout_height="171px" android:layout_width="195px" android:layout_x="1008px" android:layout_y="942px">
-                                        <android.widget.TextView android:enabled="true" android:layout_height="75px" android:layout_width="195px" android:layout_x="1008px" android:layout_y="1038px" android:text="0 π/h"/>
+                                      <android.view.View android:enabled="true"
+                                        android:layout_height="171px" android:layout_width="195px"
+                                        android:layout_x="1008px" android:layout_y="942px">
+                                        <android.widget.TextView android:enabled="true"
+                                          android:layout_height="75px" android:layout_width="195px"
+                                          android:layout_x="1008px" android:layout_y="1038px"
+                                          android:text="0 π/h" />
                                       </android.view.View>
-                                      <android.view.View android:enabled="true" android:layout_height="171px" android:layout_width="195px" android:layout_x="1008px" android:layout_y="1158px">
-                                        <android.widget.TextView android:enabled="true" android:layout_height="75px" android:layout_width="195px" android:layout_x="1008px" android:layout_y="1254px" android:text="Invite"/>
+                                      <android.view.View android:enabled="true"
+                                        android:layout_height="171px" android:layout_width="195px"
+                                        android:layout_x="1008px" android:layout_y="1158px">
+                                        <android.widget.TextView android:enabled="true"
+                                          android:layout_height="75px" android:layout_width="195px"
+                                          android:layout_x="1008px" android:layout_y="1254px"
+                                          android:text="Invite" />
                                       </android.view.View>
-                                      <android.view.View android:enabled="true" android:layout_height="852px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="1404px">
-                                        <android.widget.Button android:clickable="true" android:enabled="true" android:focusable="true" android:layout_height="120px" android:layout_width="276px" android:layout_x="177px" android:layout_y="1452px" android:text="Pi Wallet"/>
-                                        <android.widget.Button android:clickable="true" android:enabled="true" android:focusable="true" android:layout_height="120px" android:layout_width="309px" android:layout_x="735px" android:layout_y="1452px" android:text="Read More"/>
-                                        <android.widget.TextView android:enabled="true" android:layout_height="75px" android:layout_width="321px" android:layout_x="36px" android:layout_y="1617px" android:text="@PiCoreTeam"/>
-                                        <android.widget.TextView android:enabled="true" android:layout_height="75px" android:layout_width="408px" android:layout_x="777px" android:layout_y="1617px" android:text="Oct 11th - 4:40am"/>
-                                        <android.widget.TextView android:enabled="true" android:layout_height="507px" android:layout_width="1149px" android:layout_x="36px" android:layout_y="1701px" android:text="Try out Pi’s DeFi features—DEX and AMM functionalities—that were released last week on Testnet in the Pi Wallet! Watch the new walkthrough video to learn more about the features and how to get started. This release expands Pi’s capabilities in a structured, utility-focused, and Web3-aligned way, helping Pioneers explore decentralized finance safely while strengthening the ecosystem through real testing, transparency, and community participation."/>
+                                      <android.view.View android:enabled="true"
+                                        android:layout_height="852px" android:layout_width="1220px"
+                                        android:layout_x="0px" android:layout_y="1404px">
+                                        <android.widget.Button android:clickable="true"
+                                          android:enabled="true" android:focusable="true"
+                                          android:layout_height="120px" android:layout_width="276px"
+                                          android:layout_x="177px" android:layout_y="1452px"
+                                          android:text="Pi Wallet" />
+                                        <android.widget.Button android:clickable="true"
+                                          android:enabled="true" android:focusable="true"
+                                          android:layout_height="120px" android:layout_width="309px"
+                                          android:layout_x="735px" android:layout_y="1452px"
+                                          android:text="Read More" />
+                                        <android.widget.TextView android:enabled="true"
+                                          android:layout_height="75px" android:layout_width="321px"
+                                          android:layout_x="36px" android:layout_y="1617px"
+                                          android:text="@PiCoreTeam" />
+                                        <android.widget.TextView android:enabled="true"
+                                          android:layout_height="75px" android:layout_width="408px"
+                                          android:layout_x="777px" android:layout_y="1617px"
+                                          android:text="Oct 11th - 4:40am" />
+                                        <android.widget.TextView android:enabled="true"
+                                          android:layout_height="507px"
+                                          android:layout_width="1149px" android:layout_x="36px"
+                                          android:layout_y="1701px"
+                                          android:text="Try out Pi’s DeFi features—DEX and AMM functionalities—that were released last week on Testnet in the Pi Wallet! Watch the new walkthrough video to learn more about the features and how to get started. This release expands Pi’s capabilities in a structured, utility-focused, and Web3-aligned way, helping Pioneers explore decentralized finance safely while strengthening the ecosystem through real testing, transparency, and community participation." />
                                       </android.view.View>
-                                      <android.view.View android:enabled="true" android:layout_height="459px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="2253px">
-                                        <android.view.View android:enabled="true" android:layout_height="0px" android:layout_width="1125px" android:layout_x="48px" android:layout_y="2523px">
-                                          <android.view.View android:enabled="true" android:layout_height="60px" android:layout_width="312px" android:layout_x="48px" android:layout_y="2223px">
-                                            <android.widget.TextView android:enabled="true" android:layout_height="60px" android:layout_width="312px" android:layout_x="48px" android:layout_y="2223px" android:text="Pioneer Posts"/>
-                                            <android.widget.Image android:enabled="true" android:layout_height="75px" android:layout_width="75px" android:layout_x="381px" android:layout_y="2217px"/>
+                                      <android.view.View android:enabled="true"
+                                        android:layout_height="459px" android:layout_width="1220px"
+                                        android:layout_x="0px" android:layout_y="2253px">
+                                        <android.view.View android:enabled="true"
+                                          android:layout_height="0px" android:layout_width="1125px"
+                                          android:layout_x="48px" android:layout_y="2523px">
+                                          <android.view.View android:enabled="true"
+                                            android:layout_height="60px"
+                                            android:layout_width="312px" android:layout_x="48px"
+                                            android:layout_y="2223px">
+                                            <android.widget.TextView android:enabled="true"
+                                              android:layout_height="60px"
+                                              android:layout_width="312px" android:layout_x="48px"
+                                              android:layout_y="2223px" android:text="Pioneer Posts" />
+                                            <android.widget.Image android:enabled="true"
+                                              android:layout_height="75px"
+                                              android:layout_width="75px" android:layout_x="381px"
+                                              android:layout_y="2217px" />
                                           </android.view.View>
                                         </android.view.View>
-                                        <android.view.View android:enabled="true" android:layout_height="459px" android:layout_width="1125px" android:layout_x="48px" android:layout_y="2253px">
-                                          <android.widget.TextView android:enabled="true" android:layout_height="48px" android:layout_width="27px" android:layout_x="117px" android:layout_y="2298px" android:text="P"/>
-                                          <android.widget.TextView android:enabled="true" android:layout_height="57px" android:layout_width="171px" android:layout_x="180px" android:layout_y="2295px" android:text="@peejenn"/>
-                                          <android.widget.TextView android:enabled="true" android:layout_height="57px" android:layout_width="33px" android:layout_x="363px" android:layout_y="2295px" android:text="in"/>
-                                          <android.widget.TextView android:enabled="true" android:layout_height="45px" android:layout_width="201px" android:layout_x="432px" android:layout_y="2301px" android:text="#PiCommerce"/>
-                                          <android.widget.TextView android:enabled="true" android:layout_height="57px" android:layout_width="186px" android:layout_x="942px" android:layout_y="2295px" android:text="3 days ago"/>
-                                          <android.view.View android:enabled="true" android:layout_height="324px" android:layout_width="1035px" android:layout_x="93px" android:layout_y="2388px">
-                                            <android.widget.TextView android:enabled="true" android:layout_height="75px" android:layout_width="288px" android:layout_x="126px" android:layout_y="2421px" android:text="youtube.com"/>
-                                            <android.widget.TextView android:enabled="true" android:layout_height="0px" android:layout_width="549px" android:layout_x="138px" android:layout_y="2712px" android:text="EscrowPi Wallet Pi Hackathon25"/>
-                                            <android.widget.Image android:enabled="true" android:layout_height="0px" android:layout_width="51px" android:layout_x="1032px" android:layout_y="2712px"/>
+                                        <android.view.View android:enabled="true"
+                                          android:layout_height="459px"
+                                          android:layout_width="1125px" android:layout_x="48px"
+                                          android:layout_y="2253px">
+                                          <android.widget.TextView android:enabled="true"
+                                            android:layout_height="48px" android:layout_width="27px"
+                                            android:layout_x="117px" android:layout_y="2298px"
+                                            android:text="P" />
+                                          <android.widget.TextView android:enabled="true"
+                                            android:layout_height="57px"
+                                            android:layout_width="171px" android:layout_x="180px"
+                                            android:layout_y="2295px" android:text="@peejenn" />
+                                          <android.widget.TextView android:enabled="true"
+                                            android:layout_height="57px" android:layout_width="33px"
+                                            android:layout_x="363px" android:layout_y="2295px"
+                                            android:text="in" />
+                                          <android.widget.TextView android:enabled="true"
+                                            android:layout_height="45px"
+                                            android:layout_width="201px" android:layout_x="432px"
+                                            android:layout_y="2301px" android:text="#PiCommerce" />
+                                          <android.widget.TextView android:enabled="true"
+                                            android:layout_height="57px"
+                                            android:layout_width="186px" android:layout_x="942px"
+                                            android:layout_y="2295px" android:text="3 days ago" />
+                                          <android.view.View android:enabled="true"
+                                            android:layout_height="324px"
+                                            android:layout_width="1035px" android:layout_x="93px"
+                                            android:layout_y="2388px">
+                                            <android.widget.TextView android:enabled="true"
+                                              android:layout_height="75px"
+                                              android:layout_width="288px" android:layout_x="126px"
+                                              android:layout_y="2421px" android:text="youtube.com" />
+                                            <android.widget.TextView android:enabled="true"
+                                              android:layout_height="0px"
+                                              android:layout_width="549px" android:layout_x="138px"
+                                              android:layout_y="2712px"
+                                              android:text="EscrowPi Wallet Pi Hackathon25" />
+                                            <android.widget.Image android:enabled="true"
+                                              android:layout_height="0px"
+                                              android:layout_width="51px" android:layout_x="1032px"
+                                              android:layout_y="2712px" />
                                           </android.view.View>
-                                          <android.widget.TextView android:enabled="true" android:layout_height="0px" android:layout_width="1035px" android:layout_x="93px" android:layout_y="2712px" android:text="Pi Payment Protection with the EscrowPi Wallet app"/>
-                                          <android.widget.TextView android:enabled="true" android:layout_height="0px" android:layout_width="1035px" android:layout_x="93px" android:layout_y="2712px" android:text="Using the EscrowPi Wallet app you will feel safe when you pay your pi to buy every day goods and services. EscrowPi is so easy to use and gives you pi payment protection: pay, verify, release: - As a..."/>
-                                          <android.widget.Image android:enabled="true" android:layout_height="0px" android:layout_width="39px" android:layout_x="132px" android:layout_y="2712px"/>
-                                          <android.widget.Image android:enabled="true" android:layout_height="0px" android:layout_width="54px" android:layout_x="282px" android:layout_y="2712px"/>
-                                          <android.widget.TextView android:enabled="true" android:layout_height="0px" android:layout_width="147px" android:layout_x="345px" android:layout_y="2712px" android:text="13981"/>
-                                          <android.widget.Image android:enabled="true" android:layout_height="0px" android:layout_width="39px" android:layout_x="603px" android:layout_y="2712px"/>
-                                          <android.widget.TextView android:enabled="true" android:layout_height="0px" android:layout_width="99px" android:layout_x="978px" android:layout_y="2712px" android:text="127.5"/>
-                                          <android.widget.Image android:enabled="true" android:layout_height="0px" android:layout_width="42px" android:layout_x="1086px" android:layout_y="2712px"/>
+                                          <android.widget.TextView android:enabled="true"
+                                            android:layout_height="0px"
+                                            android:layout_width="1035px" android:layout_x="93px"
+                                            android:layout_y="2712px"
+                                            android:text="Pi Payment Protection with the EscrowPi Wallet app" />
+                                          <android.widget.TextView android:enabled="true"
+                                            android:layout_height="0px"
+                                            android:layout_width="1035px" android:layout_x="93px"
+                                            android:layout_y="2712px"
+                                            android:text="Using the EscrowPi Wallet app you will feel safe when you pay your pi to buy every day goods and services. EscrowPi is so easy to use and gives you pi payment protection: pay, verify, release: - As a..." />
+                                          <android.widget.Image android:enabled="true"
+                                            android:layout_height="0px" android:layout_width="39px"
+                                            android:layout_x="132px" android:layout_y="2712px" />
+                                          <android.widget.Image android:enabled="true"
+                                            android:layout_height="0px" android:layout_width="54px"
+                                            android:layout_x="282px" android:layout_y="2712px" />
+                                          <android.widget.TextView android:enabled="true"
+                                            android:layout_height="0px" android:layout_width="147px"
+                                            android:layout_x="345px" android:layout_y="2712px"
+                                            android:text="13981" />
+                                          <android.widget.Image android:enabled="true"
+                                            android:layout_height="0px" android:layout_width="39px"
+                                            android:layout_x="603px" android:layout_y="2712px" />
+                                          <android.widget.TextView android:enabled="true"
+                                            android:layout_height="0px" android:layout_width="99px"
+                                            android:layout_x="978px" android:layout_y="2712px"
+                                            android:text="127.5" />
+                                          <android.widget.Image android:enabled="true"
+                                            android:layout_height="0px" android:layout_width="42px"
+                                            android:layout_x="1086px" android:layout_y="2712px" />
                                         </android.view.View>
-                                        <android.view.View android:enabled="true" android:layout_height="0px" android:layout_width="1125px" android:layout_x="48px" android:layout_y="2712px">
-                                          <android.widget.TextView android:enabled="true" android:layout_height="0px" android:layout_width="831px" android:layout_x="87px" android:layout_y="2712px" android:text="Want to Enjoy More Posts?"/>
-                                          <android.widget.TextView android:enabled="true" android:layout_height="0px" android:layout_width="831px" android:layout_x="87px" android:layout_y="2712px" android:text="Visit Fireside Forum to continue viewing other posts and gain access to the full content."/>
-                                          <android.widget.Button android:clickable="true" android:enabled="true" android:focusable="true" android:layout_height="0px" android:layout_width="504px" android:layout_x="87px" android:layout_y="2712px" android:text="Go to Fireside Forum"/>
-                                          <android.widget.Image android:enabled="true" android:layout_height="0px" android:layout_width="243px" android:layout_x="891px" android:layout_y="2712px" android:text="AAVjoWo4m1UrAAAAAElFTkSuQmCC"/>
+                                        <android.view.View android:enabled="true"
+                                          android:layout_height="0px" android:layout_width="1125px"
+                                          android:layout_x="48px" android:layout_y="2712px">
+                                          <android.widget.TextView android:enabled="true"
+                                            android:layout_height="0px" android:layout_width="831px"
+                                            android:layout_x="87px" android:layout_y="2712px"
+                                            android:text="Want to Enjoy More Posts?" />
+                                          <android.widget.TextView android:enabled="true"
+                                            android:layout_height="0px" android:layout_width="831px"
+                                            android:layout_x="87px" android:layout_y="2712px"
+                                            android:text="Visit Fireside Forum to continue viewing other posts and gain access to the full content." />
+                                          <android.widget.Button android:clickable="true"
+                                            android:enabled="true" android:focusable="true"
+                                            android:layout_height="0px" android:layout_width="504px"
+                                            android:layout_x="87px" android:layout_y="2712px"
+                                            android:text="Go to Fireside Forum" />
+                                          <android.widget.Image android:enabled="true"
+                                            android:layout_height="0px" android:layout_width="243px"
+                                            android:layout_x="891px" android:layout_y="2712px"
+                                            android:text="AAVjoWo4m1UrAAAAAElFTkSuQmCC" />
                                         </android.view.View>
-                                        <android.view.View android:enabled="true" android:layout_height="0px" android:layout_width="513px" android:layout_x="354px" android:layout_y="2712px">
-                                          <android.widget.Image android:enabled="true" android:layout_height="0px" android:layout_width="57px" android:layout_x="426px" android:layout_y="2712px"/>
-                                          <android.widget.TextView android:enabled="true" android:layout_height="0px" android:layout_width="297px" android:layout_x="498px" android:layout_y="2712px" android:text="Go Back to Top"/>
+                                        <android.view.View android:enabled="true"
+                                          android:layout_height="0px" android:layout_width="513px"
+                                          android:layout_x="354px" android:layout_y="2712px">
+                                          <android.widget.Image android:enabled="true"
+                                            android:layout_height="0px" android:layout_width="57px"
+                                            android:layout_x="426px" android:layout_y="2712px" />
+                                          <android.widget.TextView android:enabled="true"
+                                            android:layout_height="0px" android:layout_width="297px"
+                                            android:layout_x="498px" android:layout_y="2712px"
+                                            android:text="Go Back to Top" />
                                         </android.view.View>
                                       </android.view.View>
                                     </android.view.View>
                                   </android.view.View>
                                 </android.view.View>
-                                <android.view.View android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                  <android.widget.Image android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px"/>
-                                  <android.widget.TextView android:enabled="true" android:layout_height="243px" android:layout_width="233px" android:layout_x="987px" android:layout_y="903px"/>
-                                  <android.view.View android:enabled="true" android:layout_height="2712px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="0px">
-                                    <android.view.View android:enabled="true" android:layout_height="279px" android:layout_width="141px" android:layout_x="1035px" android:layout_y="1170px">
-                                      <android.widget.TextView android:enabled="true" android:layout_height="147px" android:layout_width="141px" android:layout_x="1035px" android:layout_y="1308px" android:text="Tap to&#10;mine!"/>
+                                <android.view.View android:enabled="true"
+                                  android:layout_height="2712px" android:layout_width="1220px"
+                                  android:layout_x="0px" android:layout_y="0px">
+                                  <android.widget.Image android:enabled="true"
+                                    android:layout_height="2712px" android:layout_width="1220px"
+                                    android:layout_x="0px" android:layout_y="0px" />
+                                  <android.widget.TextView android:enabled="true"
+                                    android:layout_height="243px" android:layout_width="233px"
+                                    android:layout_x="987px" android:layout_y="903px" />
+                                  <android.view.View android:enabled="true"
+                                    android:layout_height="2712px" android:layout_width="1220px"
+                                    android:layout_x="0px" android:layout_y="0px">
+                                    <android.view.View android:enabled="true"
+                                      android:layout_height="279px" android:layout_width="141px"
+                                      android:layout_x="1035px" android:layout_y="1170px">
+                                      <android.widget.TextView android:enabled="true"
+                                        android:layout_height="147px" android:layout_width="141px"
+                                        android:layout_x="1035px" android:layout_y="1308px"
+                                        android:text="Tap to&#10;mine!" />
                                     </android.view.View>
-                                    <android.widget.TextView android:enabled="true" android:layout_height="72px" android:layout_width="894px" android:layout_x="48px" android:layout_y="765px" android:text="Tap here to mine pi!"/>
-                                    <android.widget.TextView android:enabled="true" android:layout_height="360px" android:layout_width="894px" android:layout_x="48px" android:layout_y="861px" android:text="As a contributor, you help secure the Pi transaction history by setting up your security circle. In return, you're rewarded in Pi with a higher mining rate.&#10;Thank you for being a Contributor!"/>
+                                    <android.widget.TextView android:enabled="true"
+                                      android:layout_height="72px" android:layout_width="894px"
+                                      android:layout_x="48px" android:layout_y="765px"
+                                      android:text="Tap here to mine pi!" />
+                                    <android.widget.TextView android:enabled="true"
+                                      android:layout_height="360px" android:layout_width="894px"
+                                      android:layout_x="48px" android:layout_y="861px"
+                                      android:text="As a contributor, you help secure the Pi transaction history by setting up your security circle. In return, you're rewarded in Pi with a higher mining rate.&#10;Thank you for being a Contributor!" />
                                   </android.view.View>
                                 </android.view.View>
                               </android.view.View>
@@ -179,5 +554,7 @@
       </android.widget.LinearLayout>
     </android.widget.FrameLayout>
   </android.widget.LinearLayout>
-  <android.view.View android:enabled="true" android:id="@android:id/navigationBarBackground" android:layout_height="142px" android:layout_width="1220px" android:layout_x="0px" android:layout_y="2570px"/>
+  <android.view.View android:enabled="true" android:id="@android:id/navigationBarBackground"
+    android:layout_height="142px" android:layout_width="1220px" android:layout_x="0px"
+    android:layout_y="2570px" />
 </android.widget.FrameLayout>
