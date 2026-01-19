@@ -339,8 +339,9 @@
                 <li>Enable the Gmail API (APIs & Services → Library → Gmail API)</li>
                 <li>Create OAuth 2.0 credentials (APIs & Services → Credentials → Create Credentials)</li>
                 <li><strong>Application type:</strong> Web application</li>
-                <li>Add <strong>Authorized redirect URIs:</strong> <code>https://gestures-techs.github.io/everything/micro-sites/google-multi-account-manager.html</code></li>
+                <li><strong>IMPORTANT:</strong> Add <strong>Authorized JavaScript origins:</strong> <code>https://gestures-techs.github.io</code> (NOT redirect URIs for Implicit Flow)</li>
                 <li>Copy your Client ID and paste it below</li>
+                <li><strong>Note:</strong> If using localhost, add <code>http://localhost:8080</code> to JavaScript origins</li>
             </ol>
         </div>
 
@@ -488,9 +489,31 @@
 
             // Handle OAuth callback (Implicit Flow - token in URL hash)
             async handleOAuthCallback() {
+                // First check query parameters for authorization code (fallback)
+                const urlParams = new URLSearchParams(window.location.search);
+                const authCode = urlParams.get('code');
+                
+                if (authCode) {
+                    console.error('Received authorization code instead of access token');
+                    alert('❌ Configuration Error: Your OAuth client is not configured for Implicit Flow.\n\n' +
+                          'Please update Google Cloud Console:\n' +
+                          '1. Go to APIs & Services → Credentials\n' +
+                          '2. Edit your OAuth client\n' +
+                          '3. Add to "Authorized JavaScript origins":\n' +
+                          '   https://gestures-techs.github.io\n' +
+                          '4. Remove any redirect URIs\n' +
+                          '5. Save and try again');
+                    
+                    // Clean URL
+                    window.history.replaceState({}, document.title, window.location.pathname);
+                    return;
+                }
+
                 // Check URL hash for access token
                 const hash = window.location.hash.substring(1);
                 if (!hash) return;
+
+                console.log('OAuth callback detected, hash:', hash);
 
                 const params = new URLSearchParams(hash);
                 const accessToken = params.get('access_token');
@@ -498,7 +521,14 @@
                 const state = params.get('state');
                 const scope = params.get('scope');
 
-                if (!accessToken) return;
+                console.log('Access token:', accessToken ? 'Present' : 'Missing');
+                console.log('State:', state);
+                console.log('Scope:', scope);
+
+                if (!accessToken) {
+                    console.error('No access token in OAuth callback');
+                    return;
+                }
 
                 // Verify state to prevent CSRF attacks
                 const storedState = localStorage.getItem('oauth_state');
@@ -515,6 +545,7 @@
 
                     // Get user info
                     const userInfo = await this.getUserInfo(accessToken);
+                    console.log('User info received:', userInfo);
 
                     // Store account with granted scopes
                     const account = {
@@ -528,16 +559,26 @@
                         addedAt: Date.now()
                     };
 
+                    console.log('Account object created:', account);
+
                     // Check if account already exists
                     const existingIndex = this.accounts.findIndex(a => a.id === account.id);
                     if (existingIndex >= 0) {
+                        console.log('Updating existing account at index:', existingIndex);
                         this.accounts[existingIndex] = account;
                     } else {
+                        console.log('Adding new account');
                         this.accounts.push(account);
                     }
 
                     this.saveAccounts();
+                    console.log('Accounts saved to localStorage. Total accounts:', this.accounts.length);
+                    
                     this.renderAccounts();
+                    console.log('Accounts rendered');
+
+                    // Show success message
+                    alert(`✅ Successfully authenticated as ${userInfo.name} (${userInfo.email})`);
 
                     // Clean up
                     localStorage.removeItem('oauth_state');
@@ -681,7 +722,9 @@
 
             // Render accounts
             renderAccounts() {
+                console.log('renderAccounts called. Number of accounts:', this.accounts.length);
                 const grid = document.getElementById('accountsGrid');
+                console.log('Grid element:', grid);
 
                 if (this.accounts.length === 0) {
                     grid.innerHTML = `
