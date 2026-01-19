@@ -324,10 +324,10 @@
         <div class="security-warning">
             <h3>⚠️ Security Notice</h3>
             <ul>
-                <li>This is a client-side only app using OAuth PKCE flow - tokens are stored in browser localStorage</li>
-                <li>Access tokens expire in ~1 hour and cannot be automatically refreshed without re-authentication</li>
-                <li>Vulnerable to XSS attacks - do not use for production with sensitive data</li>
-                <li>For production apps, use a backend server to securely manage refresh tokens</li>
+                <li>This is a client-side only app using OAuth Implicit Flow - tokens are stored in browser localStorage</li>
+                <li>Access tokens expire in ~1 hour and cannot be automatically refreshed</li>
+                <li>Users must re-authenticate when tokens expire</li>
+                <li>For production apps with persistent access, use a backend server with Authorization Code Flow</li>
             </ul>
         </div>
 
@@ -395,6 +395,20 @@
             },
             accounts: [],
 
+            // Generate cryptographically random state for CSRF protection
+            generateRandomState() {
+                const randomValues = new Uint32Array(2);
+                window.crypto.getRandomValues(randomValues);
+                const utf8Encoder = new TextEncoder();
+                const utf8Array = utf8Encoder.encode(
+                    String.fromCharCode.apply(null, randomValues)
+                );
+                return btoa(String.fromCharCode.apply(null, utf8Array))
+                    .replace(/\+/g, '-')
+                    .replace(/\//g, '_')
+                    .replace(/=+$/, '');
+            },
+
             init() {
                 // Load configuration from localStorage
                 const savedConfig = localStorage.getItem('googleOAuthConfig');
@@ -447,117 +461,70 @@
                 alert('✅ Configuration saved!');
             },
 
-            // Generate code verifier for PKCE
-            async generateCodeVerifier() {
-                const array = new Uint8Array(32);
-                window.crypto.getRandomValues(array);
-                return this.base64URLEncode(array);
-            },
-
-            // Generate code challenge from verifier
-            async generateCodeChallenge(codeVerifier) {
-                const encoder = new TextEncoder();
-                const data = encoder.encode(codeVerifier);
-                const hash = await window.crypto.subtle.digest('SHA-256', data);
-                return this.base64URLEncode(new Uint8Array(hash));
-            },
-
-            // Base64 URL encode
-            base64URLEncode(buffer) {
-                const bytes = new Uint8Array(buffer);
-                let binary = '';
-                for (let i = 0; i < bytes.length; i++) {
-                    binary += String.fromCharCode(bytes[i]);
-                }
-                return btoa(binary)
-                    .replace(/\+/g, '-')
-                    .replace(/\//g, '_')
-                    .replace(/=+$/g, '');
-            },
-
-            // Add new account (OAuth flow with PKCE)
+            // Add new account (OAuth Implicit Flow - no backend needed)
             async addAccount() {
                 if (!this.config.clientId) {
                     alert('Please configure your Client ID first!');
                     return;
                 }
 
-                try {
-                    // Generate PKCE values
-                    const codeVerifier = await this.generateCodeVerifier();
-                    const codeChallenge = await this.generateCodeChallenge(codeVerifier);
+                // Generate and store state for CSRF protection
+                const state = this.generateRandomState();
+                localStorage.setItem('oauth_state', state);
 
-                    // Store code verifier for callback
-                    sessionStorage.setItem('oauth_code_verifier', codeVerifier);
+                // Build OAuth URL using implicit flow
+                const authUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth');
+                authUrl.searchParams.append('client_id', this.config.clientId);
+                authUrl.searchParams.append('redirect_uri', this.config.redirectUri);
+                authUrl.searchParams.append('response_type', 'token');  // Implicit flow
+                authUrl.searchParams.append('scope', this.config.scope);
+                authUrl.searchParams.append('state', state);  // CSRF protection
+                authUrl.searchParams.append('include_granted_scopes', 'true');  // Incremental auth
+                authUrl.searchParams.append('prompt', 'select_account');
 
-                    // Build authorization URL
-                    const authUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth');
-                    authUrl.searchParams.append('client_id', this.config.clientId);
-                    authUrl.searchParams.append('redirect_uri', this.config.redirectUri);
-                    authUrl.searchParams.append('response_type', 'code');
-                    authUrl.searchParams.append('scope', this.config.scope);
-                    authUrl.searchParams.append('code_challenge', codeChallenge);
-                    authUrl.searchParams.append('code_challenge_method', 'S256');
-                    authUrl.searchParams.append('access_type', 'offline');
-                    authUrl.searchParams.append('prompt', 'consent');
-
-                    // Redirect to Google OAuth
-                    window.location.href = authUrl.toString();
-                } catch (error) {
-                    console.error('Error initiating OAuth:', error);
-                    alert('Failed to start authentication. Please try again.');
-                }
+                // Redirect to Google OAuth
+                window.location.href = authUrl.toString();
             },
 
-            // Handle OAuth callback
+            // Handle OAuth callback (Implicit Flow - token in URL hash)
             async handleOAuthCallback() {
-                const urlParams = new URLSearchParams(window.location.search);
-                const code = urlParams.get('code');
+                // Check URL hash for access token
+                const hash = window.location.hash.substring(1);
+                if (!hash) return;
 
-                if (!code) return;
+                const params = new URLSearchParams(hash);
+                const accessToken = params.get('access_token');
+                const expiresIn = params.get('expires_in');
+                const state = params.get('state');
+                const scope = params.get('scope');
 
-                const codeVerifier = sessionStorage.getItem('oauth_code_verifier');
-                if (!codeVerifier) {
-                    console.error('No code verifier found');
+                if (!accessToken) return;
+
+                // Verify state to prevent CSRF attacks
+                const storedState = localStorage.getItem('oauth_state');
+                if (state !== storedState) {
+                    console.error('State mismatch. Possible CSRF attack');
+                    alert('Security error: State mismatch. Please try again.');
                     return;
                 }
 
                 try {
-                    // Exchange authorization code for access token
-                    const tokenResponse = await fetch('https://oauth2.googleapis.com/token', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded',
-                        },
-                        body: new URLSearchParams({
-                            code: code,
-                            client_id: this.config.clientId,
-                            redirect_uri: this.config.redirectUri,
-                            grant_type: 'authorization_code',
-                            code_verifier: codeVerifier
-                        }).toString()
-                    });
-
-                    if (!tokenResponse.ok) {
-                        const errorData = await tokenResponse.json();
-                        throw new Error(`Token exchange failed: ${errorData.error_description || tokenResponse.statusText}`);
-                    }
-
-                    const tokenData = await tokenResponse.json();
-                    const accessToken = tokenData.access_token;
-                    const expiresIn = tokenData.expires_in;
+                    // Check which scopes were granted
+                    const grantedScopes = scope ? scope.split(' ') : [];
+                    console.log('Granted scopes:', grantedScopes);
 
                     // Get user info
                     const userInfo = await this.getUserInfo(accessToken);
 
-                    // Store account
+                    // Store account with granted scopes
                     const account = {
                         id: userInfo.email,
                         email: userInfo.email,
                         name: userInfo.name,
                         picture: userInfo.picture,
                         accessToken: accessToken,
-                        expiresAt: Date.now() + (expiresIn * 1000),
+                        expiresAt: Date.now() + (parseInt(expiresIn) * 1000),
+                        grantedScopes: grantedScopes,
                         addedAt: Date.now()
                     };
 
@@ -573,14 +540,14 @@
                     this.renderAccounts();
 
                     // Clean up
-                    sessionStorage.removeItem('oauth_code_verifier');
-                    
-                    // Remove code from URL
+                    localStorage.removeItem('oauth_state');
+
+                    // Remove hash from URL
                     window.history.replaceState({}, document.title, window.location.pathname);
                 } catch (error) {
-                    console.error('Error exchanging code for token:', error);
-                    alert(`Authentication failed: ${error.message}`);
-                    sessionStorage.removeItem('oauth_code_verifier');
+                    console.error('Error getting user info:', error);
+                    alert('Failed to authenticate. Please try again.');
+                    localStorage.removeItem('oauth_state');
                 }
             },
 
