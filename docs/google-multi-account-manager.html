@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Account Google OAuth Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .security-warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 4px;
+        }
+
+        .security-warning h3 {
+            color: #856404;
+            margin-bottom: 8px;
+        }
+
+        .security-warning ul {
+            margin-left: 20px;
+            color: #856404;
+        }
+
+        .main-content {
+            padding: 30px;
+        }
+
+        .config-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .config-section h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #4285f4;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: #4285f4;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #357ae8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(66, 133, 244, 0.4);
+        }
+
+        .btn-success {
+            background: #34a853;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #2d8e47;
+        }
+
+        .btn-danger {
+            background: #ea4335;
+            color: white;
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+
+        .btn-danger:hover {
+            background: #d33426;
+        }
+
+        .btn-secondary {
+            background: #fbbc04;
+            color: #333;
+            padding: 8px 16px;
+            font-size: 14px;
+            margin-right: 8px;
+        }
+
+        .btn-secondary:hover {
+            background: #f0b000;
+        }
+
+        .accounts-section {
+            margin-top: 30px;
+        }
+
+        .accounts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .account-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+
+        .account-card:hover {
+            border-color: #4285f4;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .account-card.active {
+            border-color: #34a853;
+            background: #f1f8f4;
+        }
+
+        .account-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .account-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        .account-info h3 {
+            font-size: 16px;
+            margin-bottom: 4px;
+            color: #333;
+        }
+
+        .account-info p {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .account-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .service-results {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .service-results h4 {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .service-results ul {
+            margin-left: 20px;
+        }
+
+        .service-results li {
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #888;
+        }
+
+        .empty-state svg {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .status-active {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-expired {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .instructions {
+            background: #e7f3ff;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 4px;
+        }
+
+        .instructions h3 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            color: #1976d2;
+        }
+
+        .instructions code {
+            background: #fff;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔐 Multi-Account Google OAuth Manager</h1>
+            <p>Manage multiple Google accounts in one client-side application</p>
+        </div>
+
+        <div class="security-warning">
+            <h3>⚠️ Security Notice</h3>
+            <ul>
+                <li>This is a client-side only app - tokens are stored in browser localStorage</li>
+                <li>Access tokens expire in ~1 hour and cannot be automatically refreshed</li>
+                <li>Vulnerable to XSS attacks - do not use for production with sensitive data</li>
+                <li>For production apps, use a backend server to securely manage refresh tokens</li>
+            </ul>
+        </div>
+
+        <div class="instructions">
+            <h3>📋 Setup Instructions</h3>
+            <ol>
+                <li>Go to <a href="https://console.cloud.google.com" target="_blank">Google Cloud Console</a></li>
+                <li>Create a new project or select an existing one</li>
+                <li>Enable the Gmail API (APIs & Services → Library → Gmail API)</li>
+                <li>Create OAuth 2.0 credentials (APIs & Services → Credentials → Create Credentials)</li>
+                <li>Add <code>http://localhost</code> or your domain to authorized redirect URIs</li>
+                <li>Copy your Client ID and paste it below</li>
+            </ol>
+        </div>
+
+        <div class="main-content">
+            <div class="config-section">
+                <h2>⚙️ Configuration</h2>
+                <div class="input-group">
+                    <label for="clientId">Google OAuth Client ID:</label>
+                    <input 
+                        type="text" 
+                        id="clientId" 
+                        placeholder="xxxxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com"
+                        value="">
+                </div>
+                <div class="input-group">
+                    <label for="redirectUri">Redirect URI:</label>
+                    <input 
+                        type="text" 
+                        id="redirectUri" 
+                        placeholder="http://localhost or your domain"
+                        value="">
+                </div>
+                <button class="btn btn-success" onclick="app.saveConfig()">💾 Save Configuration</button>
+            </div>
+
+            <div class="accounts-section">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2>👥 Connected Accounts</h2>
+                    <button class="btn btn-primary" onclick="app.addAccount()">+ Add Account</button>
+                </div>
+
+                <div id="accountsGrid" class="accounts-grid">
+                    <div class="empty-state">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                        <h3>No accounts connected yet</h3>
+                        <p>Click "Add Account" to get started</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Main Application
+        const app = {
+            config: {
+                clientId: '',
+                redirectUri: window.location.origin + window.location.pathname,
+                scope: 'https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile'
+            },
+            accounts: [],
+
+            init() {
+                // Load configuration from localStorage
+                const savedConfig = localStorage.getItem('googleOAuthConfig');
+                if (savedConfig) {
+                    this.config = { ...this.config, ...JSON.parse(savedConfig) };
+                    document.getElementById('clientId').value = this.config.clientId;
+                    document.getElementById('redirectUri').value = this.config.redirectUri;
+                }
+
+                // Load accounts from localStorage
+                const savedAccounts = localStorage.getItem('googleAccounts');
+                if (savedAccounts) {
+                    this.accounts = JSON.parse(savedAccounts);
+                }
+
+                // Check if returning from OAuth redirect
+                this.handleOAuthCallback();
+
+                // Update UI
+                this.renderAccounts();
+
+                // Auto-populate redirect URI
+                if (!document.getElementById('redirectUri').value) {
+                    document.getElementById('redirectUri').value = this.config.redirectUri;
+                }
+            },
+
+            saveConfig() {
+                const clientId = document.getElementById('clientId').value.trim();
+                const redirectUri = document.getElementById('redirectUri').value.trim();
+
+                if (!clientId) {
+                    alert('Please enter a Client ID');
+                    return;
+                }
+
+                if (!redirectUri) {
+                    alert('Please enter a Redirect URI');
+                    return;
+                }
+
+                this.config.clientId = clientId;
+                this.config.redirectUri = redirectUri;
+
+                localStorage.setItem('googleOAuthConfig', JSON.stringify({
+                    clientId: this.config.clientId,
+                    redirectUri: this.config.redirectUri
+                }));
+
+                alert('✅ Configuration saved!');
+            },
+
+            // Generate random string for PKCE
+            generateRandomString(length) {
+                const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~';
+                let result = '';
+                const randomValues = new Uint8Array(length);
+                crypto.getRandomValues(randomValues);
+                for (let i = 0; i < length; i++) {
+                    result += chars[randomValues[i] % chars.length];
+                }
+                return result;
+            },
+
+            // SHA256 hash for PKCE
+            async sha256(plain) {
+                const encoder = new TextEncoder();
+                const data = encoder.encode(plain);
+                const hash = await crypto.subtle.digest('SHA-256', data);
+                return hash;
+            },
+
+            // Base64 URL encode
+            base64urlencode(buffer) {
+                const bytes = new Uint8Array(buffer);
+                let str = '';
+                bytes.forEach(byte => str += String.fromCharCode(byte));
+                return btoa(str)
+                    .replace(/\+/g, '-')
+                    .replace(/\//g, '_')
+                    .replace(/=+$/, '');
+            },
+
+            // Add new account (OAuth flow)
+            async addAccount() {
+                if (!this.config.clientId) {
+                    alert('Please configure your Client ID first!');
+                    return;
+                }
+
+                // Generate PKCE values
+                const codeVerifier = this.generateRandomString(128);
+                const hashed = await this.sha256(codeVerifier);
+                const codeChallenge = this.base64urlencode(hashed);
+
+                // Store code verifier for later use
+                sessionStorage.setItem('pkce_code_verifier', codeVerifier);
+
+                // Build OAuth URL
+                const authUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth');
+                authUrl.searchParams.append('client_id', this.config.clientId);
+                authUrl.searchParams.append('redirect_uri', this.config.redirectUri);
+                authUrl.searchParams.append('response_type', 'code');
+                authUrl.searchParams.append('scope', this.config.scope);
+                authUrl.searchParams.append('code_challenge', codeChallenge);
+                authUrl.searchParams.append('code_challenge_method', 'S256');
+                authUrl.searchParams.append('access_type', 'offline');
+                authUrl.searchParams.append('prompt', 'consent');
+
+                // Redirect to Google OAuth
+                window.location.href = authUrl.toString();
+            },
+
+            // Handle OAuth callback
+            async handleOAuthCallback() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const code = urlParams.get('code');
+
+                if (!code) return;
+
+                const codeVerifier = sessionStorage.getItem('pkce_code_verifier');
+                if (!codeVerifier) {
+                    console.error('No code verifier found');
+                    return;
+                }
+
+                try {
+                    // Exchange code for token
+                    const tokenResponse = await fetch('https://oauth2.googleapis.com/token', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: new URLSearchParams({
+                            code: code,
+                            client_id: this.config.clientId,
+                            redirect_uri: this.config.redirectUri,
+                            grant_type: 'authorization_code',
+                            code_verifier: codeVerifier
+                        })
+                    });
+
+                    const tokenData = await tokenResponse.json();
+
+                    if (tokenData.access_token) {
+                        // Get user info
+                        const userInfo = await this.getUserInfo(tokenData.access_token);
+
+                        // Store account
+                        const account = {
+                            id: userInfo.email,
+                            email: userInfo.email,
+                            name: userInfo.name,
+                            picture: userInfo.picture,
+                            accessToken: tokenData.access_token,
+                            expiresAt: Date.now() + (tokenData.expires_in * 1000),
+                            addedAt: Date.now()
+                        };
+
+                        // Check if account already exists
+                        const existingIndex = this.accounts.findIndex(a => a.id === account.id);
+                        if (existingIndex >= 0) {
+                            this.accounts[existingIndex] = account;
+                        } else {
+                            this.accounts.push(account);
+                        }
+
+                        this.saveAccounts();
+                        this.renderAccounts();
+
+                        // Clean up
+                        sessionStorage.removeItem('pkce_code_verifier');
+                        
+                        // Remove query params from URL
+                        window.history.replaceState({}, document.title, window.location.pathname);
+                    }
+                } catch (error) {
+                    console.error('Error exchanging code for token:', error);
+                    alert('Failed to authenticate. Please try again.');
+                }
+            },
+
+            // Get user info from Google
+            async getUserInfo(accessToken) {
+                const response = await fetch('https://www.googleapis.com/oauth2/v2/userinfo', {
+                    headers: {
+                        'Authorization': `Bearer ${accessToken}`
+                    }
+                });
+                return await response.json();
+            },
+
+            // Save accounts to localStorage
+            saveAccounts() {
+                localStorage.setItem('googleAccounts', JSON.stringify(this.accounts));
+            },
+
+            // Remove account
+            removeAccount(accountId) {
+                if (confirm('Are you sure you want to remove this account?')) {
+                    this.accounts = this.accounts.filter(a => a.id !== accountId);
+                    this.saveAccounts();
+                    this.renderAccounts();
+                }
+            },
+
+            // Check if token is expired
+            isTokenExpired(account) {
+                return Date.now() >= account.expiresAt;
+            },
+
+            // Gmail Services
+            async listGmailLabels(account) {
+                if (this.isTokenExpired(account)) {
+                    alert('Token expired. Please re-authenticate this account.');
+                    return;
+                }
+
+                const resultDiv = document.getElementById(`results-${account.id}`);
+                resultDiv.innerHTML = '<div class="loading"></div> Loading labels...';
+
+                try {
+                    const response = await fetch('https://www.googleapis.com/gmail/v1/users/me/labels', {
+                        headers: {
+                            'Authorization': `Bearer ${account.accessToken}`
+                        }
+                    });
+
+                    const data = await response.json();
+
+                    if (data.labels) {
+                        resultDiv.innerHTML = `
+                            <h4>📁 Gmail Labels (${data.labels.length})</h4>
+                            <ul>
+                                ${data.labels.slice(0, 10).map(label => `<li>${label.name}</li>`).join('')}
+                                ${data.labels.length > 10 ? `<li><em>...and ${data.labels.length - 10} more</em></li>` : ''}
+                            </ul>
+                        `;
+                    }
+                } catch (error) {
+                    resultDiv.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+                }
+            },
+
+            async listGmailDrafts(account) {
+                if (this.isTokenExpired(account)) {
+                    alert('Token expired. Please re-authenticate this account.');
+                    return;
+                }
+
+                const resultDiv = document.getElementById(`results-${account.id}`);
+                resultDiv.innerHTML = '<div class="loading"></div> Loading drafts...';
+
+                try {
+                    const response = await fetch('https://www.googleapis.com/gmail/v1/users/me/drafts', {
+                        headers: {
+                            'Authorization': `Bearer ${account.accessToken}`
+                        }
+                    });
+
+                    const data = await response.json();
+
+                    if (data.drafts && data.drafts.length > 0) {
+                        resultDiv.innerHTML = `
+                            <h4>✉️ Gmail Drafts (${data.drafts.length})</h4>
+                            <ul>
+                                ${data.drafts.slice(0, 5).map(draft => `<li>Draft ID: ${draft.id}</li>`).join('')}
+                                ${data.drafts.length > 5 ? `<li><em>...and ${data.drafts.length - 5} more</em></li>` : ''}
+                            </ul>
+                        `;
+                    } else {
+                        resultDiv.innerHTML = '<p>No drafts found.</p>';
+                    }
+                } catch (error) {
+                    resultDiv.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+                }
+            },
+
+            async getGmailProfile(account) {
+                if (this.isTokenExpired(account)) {
+                    alert('Token expired. Please re-authenticate this account.');
+                    return;
+                }
+
+                const resultDiv = document.getElementById(`results-${account.id}`);
+                resultDiv.innerHTML = '<div class="loading"></div> Loading profile...';
+
+                try {
+                    const response = await fetch('https://www.googleapis.com/gmail/v1/users/me/profile', {
+                        headers: {
+                            'Authorization': `Bearer ${account.accessToken}`
+                        }
+                    });
+
+                    const data = await response.json();
+
+                    resultDiv.innerHTML = `
+                        <h4>👤 Gmail Profile</h4>
+                        <ul>
+                            <li><strong>Email:</strong> ${data.emailAddress}</li>
+                            <li><strong>Messages:</strong> ${data.messagesTotal}</li>
+                            <li><strong>Threads:</strong> ${data.threadsTotal}</li>
+                            <li><strong>History ID:</strong> ${data.historyId}</li>
+                        </ul>
+                    `;
+                } catch (error) {
+                    resultDiv.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+                }
+            },
+
+            // Render accounts
+            renderAccounts() {
+                const grid = document.getElementById('accountsGrid');
+
+                if (this.accounts.length === 0) {
+                    grid.innerHTML = `
+                        <div class="empty-state">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                            <h3>No accounts connected yet</h3>
+                            <p>Click "Add Account" to get started</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                grid.innerHTML = this.accounts.map(account => {
+                    const isExpired = this.isTokenExpired(account);
+                    const initial = account.name ? account.name.charAt(0).toUpperCase() : account.email.charAt(0).toUpperCase();
+
+                    return `
+                        <div class="account-card">
+                            <div class="account-header">
+                                <div class="account-avatar" style="${account.picture ? `background-image: url(${account.picture}); background-size: cover;` : ''}">
+                                    ${!account.picture ? initial : ''}
+                                </div>
+                                <div class="account-info">
+                                    <h3>${account.name || 'Google User'}</h3>
+                                    <p>${account.email}</p>
+                                    <span class="status-badge ${isExpired ? 'status-expired' : 'status-active'}">
+                                        ${isExpired ? '⚠️ Token Expired' : '✓ Active'}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="account-actions">
+                                <button class="btn btn-secondary" onclick="app.listGmailLabels(app.accounts.find(a => a.id === '${account.id}'))">
+                                    📁 Labels
+                                </button>
+                                <button class="btn btn-secondary" onclick="app.listGmailDrafts(app.accounts.find(a => a.id === '${account.id}'))">
+                                    ✉️ Drafts
+                                </button>
+                                <button class="btn btn-secondary" onclick="app.getGmailProfile(app.accounts.find(a => a.id === '${account.id}'))">
+                                    👤 Profile
+                                </button>
+                                <button class="btn btn-danger" onclick="app.removeAccount('${account.id}')">
+                                    🗑️
+                                </button>
+                            </div>
+
+                            <div id="results-${account.id}" class="service-results" style="display: none;"></div>
+                        </div>
+                    `;
+                }).join('');
+
+                // Show results divs if they have content
+                this.accounts.forEach(account => {
+                    const resultDiv = document.getElementById(`results-${account.id}`);
+                    if (resultDiv && resultDiv.innerHTML.trim()) {
+                        resultDiv.style.display = 'block';
+                    }
+                });
+            }
+        };
+
+        // Initialize app when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            app.init();
+        });
+
+        // Auto-show results when service buttons are clicked
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('btn-secondary')) {
+                const accountCard = e.target.closest('.account-card');
+                const resultsDiv = accountCard.querySelector('.service-results');
+                if (resultsDiv) {
+                    resultsDiv.style.display = 'block';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
