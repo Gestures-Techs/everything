@@ -324,10 +324,10 @@
         <div class="security-warning">
             <h3>⚠️ Security Notice</h3>
             <ul>
-                <li>This is a client-side only app - tokens are stored in browser localStorage</li>
-                <li>Access tokens expire in ~1 hour and cannot be automatically refreshed</li>
+                <li>This is a client-side only app using OAuth Implicit Flow - tokens are stored in browser localStorage</li>
+                <li>Access tokens expire in ~1 hour and cannot be automatically refreshed without re-authentication</li>
                 <li>Vulnerable to XSS attacks - do not use for production with sensitive data</li>
-                <li>For production apps, use a backend server to securely manage refresh tokens</li>
+                <li>For production apps, use a backend server with Authorization Code Flow to securely manage refresh tokens</li>
             </ul>
         </div>
 
@@ -338,7 +338,9 @@
                 <li>Create a new project or select an existing one</li>
                 <li>Enable the Gmail API (APIs & Services → Library → Gmail API)</li>
                 <li>Create OAuth 2.0 credentials (APIs & Services → Credentials → Create Credentials)</li>
-                <li>Add <code>http://localhost</code> or your domain to authorized redirect URIs</li>
+                <li><strong>Application type:</strong> Web application</li>
+                <li>Add your page URL to <strong>Authorized JavaScript origins</strong> (e.g., <code>https://gestures-techs.github.io</code>)</li>
+                <li>Add your page URL to <strong>Authorized redirect URIs</strong> (exact URL: <code>https://gestures-techs.github.io/everything/google-multi-account-manager.html</code>)</li>
                 <li>Copy your Client ID and paste it below</li>
             </ol>
         </div>
@@ -477,101 +479,67 @@
                     .replace(/=+$/, '');
             },
 
-            // Add new account (OAuth flow)
+            // Add new account (OAuth flow using Implicit Flow)
             async addAccount() {
                 if (!this.config.clientId) {
                     alert('Please configure your Client ID first!');
                     return;
                 }
 
-                // Generate PKCE values
-                const codeVerifier = this.generateRandomString(128);
-                const hashed = await this.sha256(codeVerifier);
-                const codeChallenge = this.base64urlencode(hashed);
-
-                // Store code verifier for later use
-                sessionStorage.setItem('pkce_code_verifier', codeVerifier);
-
-                // Build OAuth URL
+                // Build OAuth URL using implicit flow (token response)
                 const authUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth');
                 authUrl.searchParams.append('client_id', this.config.clientId);
                 authUrl.searchParams.append('redirect_uri', this.config.redirectUri);
-                authUrl.searchParams.append('response_type', 'code');
+                authUrl.searchParams.append('response_type', 'token');  // Request token directly
                 authUrl.searchParams.append('scope', this.config.scope);
-                authUrl.searchParams.append('code_challenge', codeChallenge);
-                authUrl.searchParams.append('code_challenge_method', 'S256');
-                authUrl.searchParams.append('access_type', 'offline');
-                authUrl.searchParams.append('prompt', 'consent');
+                authUrl.searchParams.append('prompt', 'select_account');
 
                 // Redirect to Google OAuth
                 window.location.href = authUrl.toString();
             },
 
-            // Handle OAuth callback
+            // Handle OAuth callback (Implicit Flow)
             async handleOAuthCallback() {
-                const urlParams = new URLSearchParams(window.location.search);
-                const code = urlParams.get('code');
+                // Check URL hash for token (implicit flow)
+                const hash = window.location.hash.substring(1);
+                if (!hash) return;
 
-                if (!code) return;
+                const params = new URLSearchParams(hash);
+                const accessToken = params.get('access_token');
+                const expiresIn = params.get('expires_in');
 
-                const codeVerifier = sessionStorage.getItem('pkce_code_verifier');
-                if (!codeVerifier) {
-                    console.error('No code verifier found');
-                    return;
-                }
+                if (!accessToken) return;
 
                 try {
-                    // Exchange code for token
-                    const tokenResponse = await fetch('https://oauth2.googleapis.com/token', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded',
-                        },
-                        body: new URLSearchParams({
-                            code: code,
-                            client_id: this.config.clientId,
-                            redirect_uri: this.config.redirectUri,
-                            grant_type: 'authorization_code',
-                            code_verifier: codeVerifier
-                        })
-                    });
+                    // Get user info
+                    const userInfo = await this.getUserInfo(accessToken);
 
-                    const tokenData = await tokenResponse.json();
+                    // Store account
+                    const account = {
+                        id: userInfo.email,
+                        email: userInfo.email,
+                        name: userInfo.name,
+                        picture: userInfo.picture,
+                        accessToken: accessToken,
+                        expiresAt: Date.now() + (parseInt(expiresIn) * 1000),
+                        addedAt: Date.now()
+                    };
 
-                    if (tokenData.access_token) {
-                        // Get user info
-                        const userInfo = await this.getUserInfo(tokenData.access_token);
-
-                        // Store account
-                        const account = {
-                            id: userInfo.email,
-                            email: userInfo.email,
-                            name: userInfo.name,
-                            picture: userInfo.picture,
-                            accessToken: tokenData.access_token,
-                            expiresAt: Date.now() + (tokenData.expires_in * 1000),
-                            addedAt: Date.now()
-                        };
-
-                        // Check if account already exists
-                        const existingIndex = this.accounts.findIndex(a => a.id === account.id);
-                        if (existingIndex >= 0) {
-                            this.accounts[existingIndex] = account;
-                        } else {
-                            this.accounts.push(account);
-                        }
-
-                        this.saveAccounts();
-                        this.renderAccounts();
-
-                        // Clean up
-                        sessionStorage.removeItem('pkce_code_verifier');
-                        
-                        // Remove query params from URL
-                        window.history.replaceState({}, document.title, window.location.pathname);
+                    // Check if account already exists
+                    const existingIndex = this.accounts.findIndex(a => a.id === account.id);
+                    if (existingIndex >= 0) {
+                        this.accounts[existingIndex] = account;
+                    } else {
+                        this.accounts.push(account);
                     }
+
+                    this.saveAccounts();
+                    this.renderAccounts();
+
+                    // Remove hash from URL
+                    window.history.replaceState({}, document.title, window.location.pathname);
                 } catch (error) {
-                    console.error('Error exchanging code for token:', error);
+                    console.error('Error getting user info:', error);
                     alert('Failed to authenticate. Please try again.');
                 }
             },
