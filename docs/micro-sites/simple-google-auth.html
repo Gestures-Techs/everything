@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Google Auth</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <h1>Google Sign-In Demo</h1>
+    
+    <div>
+        <label>Client ID:</label>
+        <input type="text" id="clientId" placeholder="Your-Client-ID.apps.googleusercontent.com" size="60">
+        <button onclick="saveAndInit()">Save & Init</button>
+    </div>
+    
+    <hr>
+    
+    <div id="buttonDiv"></div>
+    
+    <hr>
+    
+    <h2>Accounts (<span id="count">0</span>)</h2>
+    <div id="accounts"></div>
+
+    <script>
+        let accounts = [];
+        let clientId = '';
+
+        function saveAndInit() {
+            clientId = document.getElementById('clientId').value.trim();
+            if (!clientId) {
+                alert('Enter Client ID');
+                return;
+            }
+            localStorage.setItem('client_id', clientId);
+            init();
+            alert('Saved!');
+        }
+
+        function init() {
+            const saved = localStorage.getItem('client_id');
+            if (saved) {
+                clientId = saved;
+                document.getElementById('clientId').value = clientId;
+            }
+
+            const savedAccounts = localStorage.getItem('accounts');
+            if (savedAccounts) {
+                accounts = JSON.parse(savedAccounts);
+                render();
+            }
+
+            if (clientId) {
+                google.accounts.id.initialize({
+                    client_id: clientId,
+                    callback: handleResponse
+                });
+
+                google.accounts.id.renderButton(
+                    document.getElementById("buttonDiv"),
+                    { theme: "outline", size: "large" }
+                );
+
+                google.accounts.id.prompt();
+            }
+        }
+
+        function handleResponse(response) {
+            const payload = JSON.parse(atob(response.credential.split('.')[1]));
+            
+            const account = {
+                id: payload.sub,
+                name: payload.name,
+                email: payload.email,
+                picture: payload.picture,
+                token: response.credential
+            };
+
+            const index = accounts.findIndex(a => a.id === account.id);
+            if (index >= 0) {
+                accounts[index] = account;
+            } else {
+                accounts.push(account);
+            }
+
+            localStorage.setItem('accounts', JSON.stringify(accounts));
+            render();
+            alert('Signed in: ' + account.email);
+        }
+
+        function render() {
+            document.getElementById('count').textContent = accounts.length;
+            
+            if (accounts.length === 0) {
+                document.getElementById('accounts').innerHTML = '<p>No accounts</p>';
+                return;
+            }
+
+            document.getElementById('accounts').innerHTML = accounts.map((a, i) => `
+                <div style="border: 1px solid #ccc; padding: 10px; margin: 10px 0;">
+                    ${a.picture ? `<img src="${a.picture}" width="50" height="50" style="border-radius: 50%;">` : ''}
+                    <p><strong>${a.name}</strong></p>
+                    <p>${a.email}</p>
+                    <button onclick="remove(${i})">Remove</button>
+                </div>
+            `).join('');
+        }
+
+        function remove(index) {
+            accounts.splice(index, 1);
+            localStorage.setItem('accounts', JSON.stringify(accounts));
+            render();
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
