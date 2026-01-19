@@ -324,10 +324,10 @@
         <div class="security-warning">
             <h3>⚠️ Security Notice</h3>
             <ul>
-                <li>This is a client-side only app using OAuth Implicit Flow - tokens are stored in browser localStorage</li>
+                <li>This is a client-side only app using OAuth PKCE flow - tokens are stored in browser localStorage</li>
                 <li>Access tokens expire in ~1 hour and cannot be automatically refreshed without re-authentication</li>
                 <li>Vulnerable to XSS attacks - do not use for production with sensitive data</li>
-                <li>For production apps, use a backend server with Authorization Code Flow to securely manage refresh tokens</li>
+                <li>For production apps, use a backend server to securely manage refresh tokens</li>
             </ul>
         </div>
 
@@ -448,69 +448,106 @@
                 alert('✅ Configuration saved!');
             },
 
-            // Generate random string for PKCE
-            generateRandomString(length) {
-                const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~';
-                let result = '';
-                const randomValues = new Uint8Array(length);
-                crypto.getRandomValues(randomValues);
-                for (let i = 0; i < length; i++) {
-                    result += chars[randomValues[i] % chars.length];
-                }
-                return result;
+            // Generate code verifier for PKCE
+            async generateCodeVerifier() {
+                const array = new Uint8Array(32);
+                window.crypto.getRandomValues(array);
+                return this.base64URLEncode(array);
             },
 
-            // SHA256 hash for PKCE
-            async sha256(plain) {
+            // Generate code challenge from verifier
+            async generateCodeChallenge(codeVerifier) {
                 const encoder = new TextEncoder();
-                const data = encoder.encode(plain);
-                const hash = await crypto.subtle.digest('SHA-256', data);
-                return hash;
+                const data = encoder.encode(codeVerifier);
+                const hash = await window.crypto.subtle.digest('SHA-256', data);
+                return this.base64URLEncode(new Uint8Array(hash));
             },
 
             // Base64 URL encode
-            base64urlencode(buffer) {
+            base64URLEncode(buffer) {
                 const bytes = new Uint8Array(buffer);
-                let str = '';
-                bytes.forEach(byte => str += String.fromCharCode(byte));
-                return btoa(str)
+                let binary = '';
+                for (let i = 0; i < bytes.length; i++) {
+                    binary += String.fromCharCode(bytes[i]);
+                }
+                return btoa(binary)
                     .replace(/\+/g, '-')
                     .replace(/\//g, '_')
-                    .replace(/=+$/, '');
+                    .replace(/=+$/g, '');
             },
 
-            // Add new account (OAuth flow using Implicit Flow)
+            // Add new account (OAuth flow with PKCE)
             async addAccount() {
                 if (!this.config.clientId) {
                     alert('Please configure your Client ID first!');
                     return;
                 }
 
-                // Build OAuth URL using implicit flow (token response)
-                const authUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth');
-                authUrl.searchParams.append('client_id', this.config.clientId);
-                authUrl.searchParams.append('redirect_uri', this.config.redirectUri);
-                authUrl.searchParams.append('response_type', 'token');  // Request token directly
-                authUrl.searchParams.append('scope', this.config.scope);
-                authUrl.searchParams.append('prompt', 'select_account');
+                try {
+                    // Generate PKCE values
+                    const codeVerifier = await this.generateCodeVerifier();
+                    const codeChallenge = await this.generateCodeChallenge(codeVerifier);
 
-                // Redirect to Google OAuth
-                window.location.href = authUrl.toString();
+                    // Store code verifier for callback
+                    sessionStorage.setItem('oauth_code_verifier', codeVerifier);
+
+                    // Build authorization URL
+                    const authUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth');
+                    authUrl.searchParams.append('client_id', this.config.clientId);
+                    authUrl.searchParams.append('redirect_uri', this.config.redirectUri);
+                    authUrl.searchParams.append('response_type', 'code');
+                    authUrl.searchParams.append('scope', this.config.scope);
+                    authUrl.searchParams.append('code_challenge', codeChallenge);
+                    authUrl.searchParams.append('code_challenge_method', 'S256');
+                    authUrl.searchParams.append('access_type', 'offline');
+                    authUrl.searchParams.append('prompt', 'consent');
+
+                    // Redirect to Google OAuth
+                    window.location.href = authUrl.toString();
+                } catch (error) {
+                    console.error('Error initiating OAuth:', error);
+                    alert('Failed to start authentication. Please try again.');
+                }
             },
 
-            // Handle OAuth callback (Implicit Flow)
+            // Handle OAuth callback
             async handleOAuthCallback() {
-                // Check URL hash for token (implicit flow)
-                const hash = window.location.hash.substring(1);
-                if (!hash) return;
+                const urlParams = new URLSearchParams(window.location.search);
+                const code = urlParams.get('code');
 
-                const params = new URLSearchParams(hash);
-                const accessToken = params.get('access_token');
-                const expiresIn = params.get('expires_in');
+                if (!code) return;
 
-                if (!accessToken) return;
+                const codeVerifier = sessionStorage.getItem('oauth_code_verifier');
+                if (!codeVerifier) {
+                    console.error('No code verifier found');
+                    return;
+                }
 
                 try {
+                    // Exchange authorization code for access token
+                    const tokenResponse = await fetch('https://oauth2.googleapis.com/token', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: new URLSearchParams({
+                            code: code,
+                            client_id: this.config.clientId,
+                            redirect_uri: this.config.redirectUri,
+                            grant_type: 'authorization_code',
+                            code_verifier: codeVerifier
+                        }).toString()
+                    });
+
+                    if (!tokenResponse.ok) {
+                        const errorData = await tokenResponse.json();
+                        throw new Error(`Token exchange failed: ${errorData.error_description || tokenResponse.statusText}`);
+                    }
+
+                    const tokenData = await tokenResponse.json();
+                    const accessToken = tokenData.access_token;
+                    const expiresIn = tokenData.expires_in;
+
                     // Get user info
                     const userInfo = await this.getUserInfo(accessToken);
 
@@ -521,7 +558,7 @@
                         name: userInfo.name,
                         picture: userInfo.picture,
                         accessToken: accessToken,
-                        expiresAt: Date.now() + (parseInt(expiresIn) * 1000),
+                        expiresAt: Date.now() + (expiresIn * 1000),
                         addedAt: Date.now()
                     };
 
@@ -536,11 +573,15 @@
                     this.saveAccounts();
                     this.renderAccounts();
 
-                    // Remove hash from URL
+                    // Clean up
+                    sessionStorage.removeItem('oauth_code_verifier');
+                    
+                    // Remove code from URL
                     window.history.replaceState({}, document.title, window.location.pathname);
                 } catch (error) {
-                    console.error('Error getting user info:', error);
-                    alert('Failed to authenticate. Please try again.');
+                    console.error('Error exchanging code for token:', error);
+                    alert(`Authentication failed: ${error.message}`);
+                    sessionStorage.removeItem('oauth_code_verifier');
                 }
             },
 
