@@ -304,15 +304,19 @@
 
         // Save configuration and initialize Google Identity Services
         function saveAndInitialize() {
+            console.log('=== SAVE AND INITIALIZE ===');
             const inputClientId = document.getElementById('clientId').value.trim();
+            console.log('Input Client ID:', inputClientId);
             
             if (!inputClientId) {
+                console.error('No Client ID provided');
                 alert('Please enter a Client ID');
                 return;
             }
             
             clientId = inputClientId;
             localStorage.setItem('gis_client_id', clientId);
+            console.log('Client ID saved to localStorage');
             
             // Initialize Google Identity Services
             initializeGIS();
@@ -322,6 +326,7 @@
 
         // Initialize Google Identity Services
         function initializeGIS() {
+            console.log('=== INITIALIZE GIS ===');
             if (!clientId) {
                 console.error('Client ID not configured');
                 return;
@@ -335,8 +340,10 @@
                 auto_select: false,
                 cancel_on_tap_outside: true
             });
+            console.log('GIS initialize() called');
 
             // Render the Sign-In button
+            console.log('Rendering sign-in button...');
             google.accounts.id.renderButton(
                 document.getElementById("buttonDiv"),
                 { 
@@ -347,13 +354,15 @@
                     logo_alignment: "left"
                 }
             );
+            console.log('Sign-in button rendered');
 
             // Show One Tap prompt
+            console.log('Showing One Tap prompt...');
             google.accounts.id.prompt((notification) => {
                 console.log('One Tap notification:', notification);
             });
 
-            console.log('Google Identity Services initialized');
+            console.log('=== GIS INITIALIZATION COMPLETE ===');
         }
 
         // Handle credential response
